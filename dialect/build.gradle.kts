@@ -24,13 +24,12 @@ grammarKit {
 }
 
 dependencies {
-    compileOnly("app.cash.sqldelight:dialect-api:2.0.0-alpha03")
+    compileOnly("app.cash.sqldelight:dialect-api:2.0.0-SNAPSHOT")
     compileOnly("com.jetbrains.intellij.platform:core-ui:$idea")
     compileOnly("com.jetbrains.intellij.platform:lang-impl:$idea")
 
     testImplementation(kotlin("test-junit"))
-
-    testImplementation("app.cash.sqldelight:dialect-api:2.0.0-alpha03")
+    testImplementation("app.cash.sqldelight:dialect-api:2.0.0-SNAPSHOT")
     testImplementation("com.jetbrains.intellij.java:java-psi:$idea")
     testImplementation("com.jetbrains.intellij.platform:core-impl:$idea")
     testImplementation("com.jetbrains.intellij.platform:core-ui:$idea")

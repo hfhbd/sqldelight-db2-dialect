@@ -2,9 +2,7 @@ package app.softwork.sqldelight.db2dialect
 
 import app.cash.sqldelight.dialect.api.*
 import app.softwork.sqldelight.db2dialect.grammar.*
-import app.softwork.sqldelight.db2dialect.grammar.mixins.*
 import com.alecstrong.sql.psi.core.*
-import com.alecstrong.sql.psi.core.psi.*
 import com.intellij.icons.*
 import com.squareup.kotlinpoet.*
 import javax.swing.*
@@ -19,7 +17,6 @@ public class Db2Dialect : SqlDelightDialect {
         val currentElementCreation = Db2ParserUtil.createElement
         Db2ParserUtil.createElement = {
             when (it.elementType) {
-                SqlTypes.COLUMN_DEF -> ColumnDefMixin(it)
                 else -> currentElementCreation(it)
             }
         }
@@ -28,7 +25,6 @@ public class Db2Dialect : SqlDelightDialect {
     override fun typeResolver(parentResolver: TypeResolver): TypeResolver = Db2TypeResolver(parentResolver)
 
     override val runtimeTypes: RuntimeTypes = RuntimeTypes(
-        ClassName("app.cash.sqldelight.db", "SqlDriver"),
         ClassName("app.cash.sqldelight.driver.jdbc", "JdbcCursor"),
         ClassName("app.cash.sqldelight.driver.jdbc", "JdbcPreparedStatement")
     )
