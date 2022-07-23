@@ -16,6 +16,15 @@ allprojects {
     group = "app.softwork"
 }
 
+buildscript {
+    repositories {
+        maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
+    }
+    dependencies {
+        classpath("com.alecstrong.sql.psi:core:0.5.0-SNAPSHOT")
+    }
+}
+
 nexusPublishing {
     repositories {
         sonatype {

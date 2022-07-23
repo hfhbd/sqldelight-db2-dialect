@@ -10,4 +10,4 @@ new:
 INSERT INTO foo VALUES ?;
 
 create:
-INSERT INTO foo (id, name) VALUES ?;
+INSERT INTO foo (name) VALUES ?;

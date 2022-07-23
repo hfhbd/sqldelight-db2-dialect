@@ -54,8 +54,8 @@ publishing {
     publications.all {
         this as MavenPublication
         pom {
-            name.set("app.softwork Postgres Native Driver and SqlDelight Dialect")
-            description.set("A Postgres native driver including support for SqlDelight")
+            name.set("app.softwork DB2 Dialect for SqlDelight")
+            description.set("A DB2 dialect for SqlDelight")
             url.set("https://github.com/hfhbd/kotlinx-serialization-csv")
             licenses {
                 license {
