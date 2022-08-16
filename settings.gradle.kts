@@ -1,6 +1,7 @@
 pluginManagement {
     repositories {
         mavenLocal()
+        mavenCentral()
         gradlePluginPortal()
         maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
         maven(url = "https://www.jetbrains.com/intellij-repository/releases")
