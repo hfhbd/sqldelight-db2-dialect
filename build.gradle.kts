@@ -4,7 +4,7 @@ plugins {
     `maven-publish`
     signing
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
-    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.11.0"
+    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.11.0" apply false
     id("com.github.johnrengelman.shadow") version "7.1.2" apply false
     id("app.cash.sqldelight") version "2.0.0-SNAPSHOT" apply false
     id("app.cash.licensee") version "1.5.0" apply false
@@ -23,6 +23,8 @@ subprojects {
     if (this.name == "testing") {
         return@subprojects
     }
+
+    plugins.apply("org.jetbrains.kotlinx.binary-compatibility-validator")
 
     plugins.apply("app.cash.licensee")
     configure<app.cash.licensee.LicenseeExtension> {
