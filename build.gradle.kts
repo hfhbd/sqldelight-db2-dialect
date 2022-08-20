@@ -9,20 +9,14 @@ plugins {
 
 allprojects {
     repositories {
+        mavenLocal()
         mavenCentral()
         maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
+        maven(url = "https://www.jetbrains.com/intellij-repository/releases")
+        maven(url = "https://cache-redirector.jetbrains.com/intellij-dependencies")
     }
 
     group = "app.softwork"
-}
-
-buildscript {
-    repositories {
-        maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
-    }
-    dependencies {
-        classpath("com.alecstrong.sql.psi:core:0.5.0-SNAPSHOT")
-    }
 }
 
 nexusPublishing {
