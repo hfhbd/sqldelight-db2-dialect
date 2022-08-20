@@ -8,34 +8,28 @@
   psiClassPrefix = "Db2"
 
   parserImports=[
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.AS"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.CONSTRAINT"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.GENERATED"
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.ALWAYS"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.AS"
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.BY"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.COMMA"
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.DEFAULT"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.NO"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.PRIMARY"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.KEY"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.ASC"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.DESC"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.ID"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.INSERT"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.INTO"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.MERGE"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.NOT"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.NULL"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.ON"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.UNIQUE"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.UPDATE"
-    "static com.alecstrong.sql.psi.core.psi.SqlTypes.COLLATE"
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.DIGIT"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.EACH"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.FOR"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.GENERATED"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.LP"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.NO"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.ON"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.ORDER"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.ROW"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.RP"
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.TO"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.UPDATE"
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.WITH"
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.WITHOUT"
   ]
 }
-overrides ::= type_name | generated_clause
+overrides ::= type_name | generated_clause | bind_parameter
 
 type_name ::= (
   tiny_int_data_type |
@@ -58,51 +52,57 @@ type_name ::= (
 
 generated_clause ::=
 (GENERATED (ALWAYS | BY DEFAULT) ( as_identity_clause | as_row_change_timestamp_clause ) |
-(GENERATED [ALWAYS] (AS 'TRANSACTION START ID' | as_row_change_timestamp_clause | AS '(' <<expr '-1'>> ')'))
+(GENERATED [ALWAYS] (AS 'TRANSACTION START ID' | as_row_change_timestamp_clause | AS LP <<expr '-1'>> RP))
 ) {
   extends = "com.alecstrong.sql.psi.core.psi.impl.SqlGeneratedClauseImpl"
   implements = "com.alecstrong.sql.psi.core.psi.SqlGeneratedClause"
   override = true
 }
 
-private as_row_change_timestamp_clause ::= 'FOR EACH ROW' ON UPDATE AS 'ROW CHANGE TIMESTAMP'
+private as_row_change_timestamp_clause ::= FOR EACH ROW ON UPDATE AS ROW 'CHANGE' 'TIMESTAMP'
 
-as_identity_clause ::= AS 'IDENTITY' [ '(' as_identity_clause_options (',' as_identity_clause_options)+ ')' ]
-private as_identity_clause_options ::= ('START WITH' digit) |
-('INCREMENT BY' digit) |
+as_identity_clause ::= AS 'IDENTITY' [ LP as_identity_clause_options (COMMA as_identity_clause_options)+ RP ]
+private as_identity_clause_options ::= ('START' WITH digit) |
+('INCREMENT' BY digit) |
 (NO 'MINVALUE' | ('MINVALUE' digit) ) |
 (NO 'MAXVALUE' | ('MAXVALUE' digit) ) |
 (NO 'CYCLE') |
 (NO 'CACHE' | ('CACHE' digit)) |
-([NO] 'ORDER')
+([NO] ORDER)
 
 tiny_int_data_type ::= 'TINYINT'
 small_int_data_type ::= 'SMALLINT'
 int_data_type ::= 'INTEGER' | 'INT'
 big_int_data_type ::= 'BIGINT'
-fixed_point_data_type ::= { 'NUMERIC' | 'DECIMAL' | 'DEC' } [ '(' precision [ ',' scale ] ')' ]
-approximate_numeric_data_type ::= 'FLOAT' [ '(' precision ')' ] | 'REAL' | ( 'DOUBLE' 'PRECISION' ) | 'DOUBLE'
+fixed_point_data_type ::= { 'NUMERIC' | 'DECIMAL' | 'DEC' } [ LP precision [ COMMA scale ] RP ]
+approximate_numeric_data_type ::= 'FLOAT' [ LP precision RP ] | 'REAL' | ( 'DOUBLE' 'PRECISION' ) | 'DOUBLE'
 precision ::= digit
 scale ::= digit
 
 boolean_data_type ::= 'BOOLEAN'
 
-character_string_data_type ::= { ('CHARACTER' 'VARYING') | ('CHAR' 'VARYING') | 'VARCHAR' } '(' digit ')' | character_large_object_data_type | { 'CHARACTER' | 'CHAR' | 'LONGVARCHAR' } [ '(' digit ')' ]
-character_large_object_data_type ::= { ('CHARACTER' 'LARGE' 'OBJECT') | ('CHAR' 'LARGE' 'OBJECT') | 'CLOB' } [ '(' character_large_object_length ')' ]
+character_string_data_type ::= { ('CHARACTER' 'VARYING') | ('CHAR' 'VARYING') | 'VARCHAR' } LP digit RP | character_large_object_data_type | { 'CHARACTER' | 'CHAR' | 'LONGVARCHAR' } [ LP digit RP ]
+character_large_object_data_type ::= { ('CHARACTER' 'LARGE' 'OBJECT') | ('CHAR' 'LARGE' 'OBJECT') | 'CLOB' } [ LP character_large_object_length RP ]
 character_large_object_length ::= digit [ multiplier ] [ char_length_units ]
 multiplier ::= 'K' | 'M' | 'G'
 char_length_units ::= 'CHARACTERS' | 'OCTETS'
 
-binary_string_data_type ::= { ('BINARY' 'VARYING') | 'VARBINARY' } '(' digit ')' | binary_large_object_string_data_type | { 'BINARY' | 'LONGVARBINARY' } [ '(' digit ')' ] | 'UUID'
-binary_large_object_string_data_type ::= { ('BINARY' 'LARGE' 'OBJECT') | 'BLOB' } [ '(' digit ')' ]
+binary_string_data_type ::= { ('BINARY' 'VARYING') | 'VARBINARY' } LP digit RP | binary_large_object_string_data_type | { 'BINARY' | 'LONGVARBINARY' } [ LP digit RP ] | 'UUID'
+binary_large_object_string_data_type ::= { ('BINARY' 'LARGE' 'OBJECT') | 'BLOB' } [ LP digit RP ]
 
-bit_string_data_type ::= ('BIT' 'VARYING') '(' digit ')' | 'BIT' [ '(' digit ')' ]
+bit_string_data_type ::= ('BIT' 'VARYING') LP digit RP | 'BIT' [ LP digit RP ]
 
-date_data_type ::= 'DATE' | ( 'TIME' | 'TIMESTAMP' ) [ '(' digit ')' ] [ ( WITH | WITHOUT ) 'TIME' 'ZONE' ]
+date_data_type ::= 'DATE' | ( 'TIME' | 'TIMESTAMP' ) [ LP digit RP ] [ ( WITH | WITHOUT ) 'TIME' 'ZONE' ]
 
 interval_data_type ::= 'INTERVAL' interval_qualifier
 interval_qualifier ::= start_field TO end_field | single_datetime_field
-start_field ::= non_second_primary_datetime_field [ '(' digit ')' ]
-end_field ::= non_second_primary_datetime_field | 'SECOND' [ '(' digit ')' ]
-single_datetime_field ::= non_second_primary_datetime_field [ '(' digit ')' ] | 'SECOND' [ '(' digit [ ',' digit ] ')' ]
+start_field ::= non_second_primary_datetime_field [ LP digit RP ]
+end_field ::= non_second_primary_datetime_field | 'SECOND' [ LP digit RP ]
+single_datetime_field ::= non_second_primary_datetime_field [ LP digit RP ] | 'SECOND' [ LP digit [ COMMA digit ] RP ]
 non_second_primary_datetime_field ::= 'YEAR' | 'MONTH' | 'DAY' | 'HOUR' | 'MINUTE'
+
+bind_parameter ::= (':' {identifier}) | '?' {
+  extends = "com.alecstrong.sql.psi.core.psi.impl.SqlBindParameterImpl"
+  implements = "com.alecstrong.sql.psi.core.psi.SqlBindParameter"
+  override = true
+}

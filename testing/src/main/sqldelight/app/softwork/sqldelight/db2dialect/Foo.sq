@@ -11,3 +11,12 @@ INSERT INTO foo VALUES ?;
 
 create:
 INSERT INTO foo (name) VALUES ?;
+
+embedded:
+SELECT * INTO :id, :name FROM foo;
+
+set:
+SET :foo = 42;
+
+setSelect:
+SET :foo = SELECT * FROM foo;
