@@ -15,7 +15,7 @@ repositories {
 }
 
 sqldelight {
-    database("NativePostgres") {
+    database("Db2Database") {
         dialect("app.softwork:sqldelight-db2-dialect:LATEST")
     }
 }
