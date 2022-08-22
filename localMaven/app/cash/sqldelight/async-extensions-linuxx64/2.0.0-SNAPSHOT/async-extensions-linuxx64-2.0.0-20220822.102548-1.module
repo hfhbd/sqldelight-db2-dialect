@@ -1,0 +1,105 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../async-extensions/2.0.0-SNAPSHOT/async-extensions-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "async-extensions",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "linuxX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.6.4"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "async-extensions.klib",
+          "url": "async-extensions-linuxx64-2.0.0-SNAPSHOT.klib",
+          "size": 10103,
+          "sha512": "3061618232e4e2a9852b67550e429259721e812f0df2b89fcd86214c0cc2691262c94491208c32a260593a709ee7d7dc8309363237570e582f2e10a08053de32",
+          "sha256": "298d4c02f227a16f54414740fc18ae8f1843c1ffd29b9c7b3e46229c7966fd0a",
+          "sha1": "f8f5dde6061f79e28623dda80e79c0cd55b3f7c3",
+          "md5": "70b68c12707b93fbb6dc715a1c84804b"
+        }
+      ]
+    }
+  ]
+}

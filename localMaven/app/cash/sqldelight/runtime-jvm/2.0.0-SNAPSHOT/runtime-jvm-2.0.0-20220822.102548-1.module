@@ -1,0 +1,147 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../runtime/2.0.0-SNAPSHOT/runtime-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "runtime",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime-jvm-2.0.0-SNAPSHOT.jar",
+          "url": "runtime-jvm-2.0.0-SNAPSHOT.jar",
+          "size": 65092,
+          "sha512": "336461d6658fa39907ed19f15266c304cdcf2432a5fe1fa04b9ed694ce779dca8e65a686f70b959748134301c8f9d056a92049b45bb6f9a09b72934d234e2d20",
+          "sha256": "a2911884149d8daa84f2d36f480210f065ec79816481915a2c23acb611619415",
+          "sha1": "1b45e665e8b2c416023ff28fb1feb5690bc634ff",
+          "md5": "ff9e2ca6f28b287588fc580eb596daa8"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime-jvm-2.0.0-SNAPSHOT.jar",
+          "url": "runtime-jvm-2.0.0-SNAPSHOT.jar",
+          "size": 65092,
+          "sha512": "336461d6658fa39907ed19f15266c304cdcf2432a5fe1fa04b9ed694ce779dca8e65a686f70b959748134301c8f9d056a92049b45bb6f9a09b72934d234e2d20",
+          "sha256": "a2911884149d8daa84f2d36f480210f065ec79816481915a2c23acb611619415",
+          "sha1": "1b45e665e8b2c416023ff28fb1feb5690bc634ff",
+          "md5": "ff9e2ca6f28b287588fc580eb596daa8"
+        }
+      ]
+    }
+  ]
+}

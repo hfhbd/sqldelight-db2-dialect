@@ -1,0 +1,233 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../coroutines-extensions/2.0.0-SNAPSHOT/coroutines-extensions-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "coroutines-extensions",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "tvosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.6.4"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "app.cash.sqldelight",
+          "module": "async-extensions",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "coroutines-extensions.klib",
+          "url": "coroutines-extensions-tvosx64-2.0.0-SNAPSHOT.klib",
+          "size": 10729,
+          "sha512": "5c5bdb17027af3f0321f1d0d7de8d9d68612ac5c772485ff9fdcea8e1f3d3859d03fcc141668c6abed6a79293970afadf03be9390c21b7cfd1459e635228e72a",
+          "sha256": "80039aee7d63c0089ebb76262c9503bf18a6e1cf3b30a4ad46ad917da038269e",
+          "sha1": "42a6844ac76223901f2cdb0686d98d4e7dc47ccf",
+          "md5": "d4df1591230b7aa7804f134ceab61529"
+        }
+      ]
+    },
+    {
+      "name": "tvosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.6.4"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "app.cash.sqldelight",
+          "module": "async-extensions",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "sqldelight-coroutines-extensions-tvosx64-2.0.0-SNAPSHOT-metadata.jar",
+          "url": "coroutines-extensions-tvosx64-2.0.0-SNAPSHOT-metadata.jar",
+          "size": 261,
+          "sha512": "b3cfc0074690cc5e734d09020866c18872031d1924e4c8db7e8373b77b2a9319bef98883e8050995c07bf4986599e1796846329bf6979d26b90d4bd0559b8b51",
+          "sha256": "60a37d158f05a30d8008307f3f07c7f688e8efa3149a6f2f01da71716f49051f",
+          "sha1": "a3a7b4e5acba3292e22aacec5b3b09fd29dbf539",
+          "md5": "88fcdc5aff3743f1218fa16836c70c9c"
+        }
+      ]
+    }
+  ]
+}

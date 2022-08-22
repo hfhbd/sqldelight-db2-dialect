@@ -1,0 +1,149 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../native-driver/2.0.0-SNAPSHOT/native-driver-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "native-driver",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "tvosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "sqliter-driver",
+          "version": {
+            "requires": "1.2.0"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "native-driver.klib",
+          "url": "native-driver-tvosx64-2.0.0-SNAPSHOT.klib",
+          "size": 46683,
+          "sha512": "cea9b2d5a1ab73e35e7d092c16880a8e07971311c9a82de04375246b83073bb03c5e08455f6ade3b2a6ac71baf48ea18287daf8f7a874839ca658f70d60dbdd6",
+          "sha256": "fe90185c41f3e531dc4f8d9876911a81c4de09e0d1acc5eec635b8dfb20f643f",
+          "sha1": "b09c9b044004de61ab511c3916a01d6b563fbc6b",
+          "md5": "d4540aa7e42081baa0fcfbabc1977ee1"
+        }
+      ]
+    },
+    {
+      "name": "tvosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "sqliter-driver",
+          "version": {
+            "requires": "1.2.0"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "native-driver-tvosx64-2.0.0-SNAPSHOT-metadata.jar",
+          "url": "native-driver-tvosx64-2.0.0-SNAPSHOT-metadata.jar",
+          "size": 6008,
+          "sha512": "860fb9e7ef998fb2468fe9006b9c5488fe4ba655c63749f522a7d13b03368f61307c06a19e88171a71568ef6667676fef9d48e307b49e58bd600eda54d0c01c7",
+          "sha256": "6ed33a66e15ae30886fc8bcfc14f9e6a794aab179be4720e7e8d6bd5a892626d",
+          "sha1": "22529714623a733cd9aa09d45fd50fe069194a95",
+          "md5": "61a07c2a99287f55e09964366425b813"
+        }
+      ]
+    }
+  ]
+}

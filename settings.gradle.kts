@@ -1,17 +1,14 @@
 pluginManagement {
     repositories {
-        mavenLocal()
-        mavenCentral()
+        maven(url ="file://${rootDir.absolutePath}/localMaven")
         gradlePluginPortal()
-        maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
-        maven(url = "https://www.jetbrains.com/intellij-repository/releases")
-        maven(url = "https://cache-redirector.jetbrains.com/intellij-dependencies")
     }
 }
 
-rootProject.name = "sqldelight-db2-dialect"
+rootProject.name = "sqldelight-db2"
 
-include(":dialect")
-project(":dialect").name = "sqldelight-db2-dialect"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+include(":sqldelight-db2-dialect")
 
 include(":testing")

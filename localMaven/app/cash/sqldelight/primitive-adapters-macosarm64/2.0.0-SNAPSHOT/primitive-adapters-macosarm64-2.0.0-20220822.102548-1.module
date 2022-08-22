@@ -1,0 +1,149 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../primitive-adapters/2.0.0-SNAPSHOT/primitive-adapters-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "primitive-adapters",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "macosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "primitive-adapters.klib",
+          "url": "primitive-adapters-macosarm64-2.0.0-SNAPSHOT.klib",
+          "size": 7475,
+          "sha512": "9c1fdded1b3b42a183679d0ee6b8497558ebfa94f674d4e6e9f07097907e80df65f59054cee23a1d9d65bd0edb145f4a079d92493d9becec4448aece88e849f3",
+          "sha256": "1fca11bd7fc305a48539d8ca8deb0bb1cb2be977f605eed9971089966c4cacf0",
+          "sha1": "32df1cd8fa256557813b12bcfd1c1a776a7d4f45",
+          "md5": "f8e86f75c7f0bea8d1f9502ea30a25e7"
+        }
+      ]
+    },
+    {
+      "name": "macosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "sqldelight-primitive-adapters-macosarm64-2.0.0-SNAPSHOT-metadata.jar",
+          "url": "primitive-adapters-macosarm64-2.0.0-SNAPSHOT-metadata.jar",
+          "size": 261,
+          "sha512": "e98abd2c104bbfd10b3cb3c7545993db72cb5928ba8db8a73e78a09fd3a58c73bbb0ec2985804435c4a3a2e3dcab6dadb60a27257bfa8ef4ecf036446a48bac7",
+          "sha256": "0ffd964b4aee7d7e2ee7777ee6e353f616514207055ca5a14f7e9e749c88f3d8",
+          "sha1": "b7ccbb9abd5905bff6f27717e41f358354fbb972",
+          "md5": "7e47fb3a9b42930b21a6a8dd4c21ed05"
+        }
+      ]
+    }
+  ]
+}

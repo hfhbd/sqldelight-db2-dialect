@@ -1,0 +1,84 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../primitive-adapters/2.0.0-SNAPSHOT/primitive-adapters-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "primitive-adapters",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "linuxX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "primitive-adapters.klib",
+          "url": "primitive-adapters-linuxx64-2.0.0-SNAPSHOT.klib",
+          "size": 7380,
+          "sha512": "be10e4916247bf41d3aafdd1d7253efd888ab84512ee03713568aefda53f1b52970534f0d9669de39093e760f118cbc5feae4530143a7d77b4b8e07fa7e5fcd3",
+          "sha256": "d602e3517c9d36185510e1901427a79940230f8526ac79a67618bf4ad6d71f1e",
+          "sha1": "a70e3d18a981f5f6bbb9ec16b61d9e327cbc99e9",
+          "md5": "78857436d85eb95abcc0435e0822c71d"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../primitive-adapters/2.0.0-SNAPSHOT/primitive-adapters-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "primitive-adapters",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "watchosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "primitive-adapters.klib",
+          "url": "primitive-adapters-watchossimulatorarm64-2.0.0-SNAPSHOT.klib",
+          "size": 7531,
+          "sha512": "0f55e9b7bb439c834a493d2b8082b8e330982d921b194dc8aee4dbb87ac6b587e402d175dd6c0661b6698dd4c85fedd947c628127a5b17e1af141df7d0dbb7cd",
+          "sha256": "f0549765b805abb84e2144839b99f0a5526333d65bb8d96172f3384af1aeb205",
+          "sha1": "614fc392119137e13769b336c632d1d84dbde719",
+          "md5": "9588d17935c3b7a8bd1c780af92dbd7d"
+        }
+      ]
+    },
+    {
+      "name": "watchosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "sqldelight-primitive-adapters-watchossimulatorarm64-2.0.0-SNAPSHOT-metadata.jar",
+          "url": "primitive-adapters-watchossimulatorarm64-2.0.0-SNAPSHOT-metadata.jar",
+          "size": 261,
+          "sha512": "e98abd2c104bbfd10b3cb3c7545993db72cb5928ba8db8a73e78a09fd3a58c73bbb0ec2985804435c4a3a2e3dcab6dadb60a27257bfa8ef4ecf036446a48bac7",
+          "sha256": "0ffd964b4aee7d7e2ee7777ee6e353f616514207055ca5a14f7e9e749c88f3d8",
+          "sha1": "b7ccbb9abd5905bff6f27717e41f358354fbb972",
+          "md5": "7e47fb3a9b42930b21a6a8dd4c21ed05"
+        }
+      ]
+    }
+  ]
+}

@@ -12,11 +12,8 @@ plugins {
 
 allprojects {
     repositories {
-        mavenLocal()
+        maven(url ="file://${rootDir.absolutePath}/localMaven")
         mavenCentral()
-        maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
-        maven(url = "https://www.jetbrains.com/intellij-repository/releases")
-        maven(url = "https://cache-redirector.jetbrains.com/intellij-dependencies")
     }
 
     group = "app.softwork"
@@ -31,7 +28,6 @@ subprojects {
     configure<app.cash.licensee.LicenseeExtension> {
         allow("Apache-2.0")
         allow("MIT")
-        allowUrl("https://jdbc.postgresql.org/about/license.html")
     }
 
     afterEvaluate {

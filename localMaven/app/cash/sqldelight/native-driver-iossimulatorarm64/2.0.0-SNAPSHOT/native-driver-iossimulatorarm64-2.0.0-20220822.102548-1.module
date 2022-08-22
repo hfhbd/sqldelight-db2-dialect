@@ -1,0 +1,149 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../native-driver/2.0.0-SNAPSHOT/native-driver-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "native-driver",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "sqliter-driver",
+          "version": {
+            "requires": "1.2.0"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "native-driver.klib",
+          "url": "native-driver-iossimulatorarm64-2.0.0-SNAPSHOT.klib",
+          "size": 46777,
+          "sha512": "fab0858641f563c4b3e71e57326fd021eb4e50c85e7d141cce4e26a98322cf0a918762b5d6e611cbf44dbdc0308b245543fe760da68a49b21d635cc1331850f9",
+          "sha256": "46a987fafbee5f1da6bd49e72d984fe029f53021b351f5a02bf8e052024ef70f",
+          "sha1": "4f5eec7933e9c6853ac4bedaef4328db3f094c30",
+          "md5": "6e870de2a9107e7c1d42bd4b594a0cd6"
+        }
+      ]
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "sqliter-driver",
+          "version": {
+            "requires": "1.2.0"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "native-driver-iossimulatorarm64-2.0.0-SNAPSHOT-metadata.jar",
+          "url": "native-driver-iossimulatorarm64-2.0.0-SNAPSHOT-metadata.jar",
+          "size": 6008,
+          "sha512": "42e65981da1a0902e1c57ed1dc46764790c450161b93260b75d86b8f7e9480d03f6b51bb000f2935f15012ac1d435e690ae87a5198ff4d3aff9af804bc1dffa9",
+          "sha256": "04180e11140ad7f999ca49f65cca01d918185e14be05d7992a492b8693536fe3",
+          "sha1": "123b211999dc1ccb65583ed860291378001f4030",
+          "md5": "3b5d2afa85b2e8041b7421571d368aa6"
+        }
+      ]
+    }
+  ]
+}

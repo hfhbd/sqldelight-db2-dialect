@@ -1,0 +1,149 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../native-driver/2.0.0-SNAPSHOT/native-driver-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "native-driver",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "macosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "sqliter-driver",
+          "version": {
+            "requires": "1.2.0"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "native-driver.klib",
+          "url": "native-driver-macosx64-2.0.0-SNAPSHOT.klib",
+          "size": 46742,
+          "sha512": "e8572078868641b49ec8ccc97ab7a103194b7dcfee734e09c5e39182ac38bc9f72a215d82110587e248c12c68db03009e449970a6239f4ee0f0f3930ea6d900c",
+          "sha256": "9a5eebb01c4823e8c60e95895ba92bd4f55e27945b5a2c2791866e10ebc56928",
+          "sha1": "9e455314a408e0595b64bae5e22f082f734747c5",
+          "md5": "291711893f907b5b51d8ad9ed8ec9a3b"
+        }
+      ]
+    },
+    {
+      "name": "macosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "sqliter-driver",
+          "version": {
+            "requires": "1.2.0"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "native-driver-macosx64-2.0.0-SNAPSHOT-metadata.jar",
+          "url": "native-driver-macosx64-2.0.0-SNAPSHOT-metadata.jar",
+          "size": 6008,
+          "sha512": "3ba31e031f0acdfd3a3976a9f4ee1df33e7c36c82f3165f24e5cfff26ead5d499a965d6f1ee895bac65d911460503b47730f47827a5812e798549c30c6faa803",
+          "sha256": "a18f3f2241926658053de7a61299bacf0644fc647cf58d5c3316501c08c5662e",
+          "sha1": "207e8fe932f5fdd3b113e7ece0aa8d3fcd0a49bf",
+          "md5": "22b175df4aa1e73ae5227182e1655e48"
+        }
+      ]
+    }
+  ]
+}

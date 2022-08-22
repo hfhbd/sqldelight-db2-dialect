@@ -1,0 +1,149 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../runtime/2.0.0-SNAPSHOT/runtime-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "runtime",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "stately-concurrency",
+          "version": {
+            "requires": "1.2.3"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime.klib",
+          "url": "runtime-iossimulatorarm64-2.0.0-SNAPSHOT.klib",
+          "size": 49459,
+          "sha512": "674603a54165c90fe9cbb581151369fb3372560a3de7a38d39dfa6ca92d7f64d4f9c7b60e781bc96b8d39cae2f471b5dbabac49867186463037bfcf04d1ffa65",
+          "sha256": "b46433217c3a642521b9b60da429c6a089823bc8d8ed85b4feaf8a952b471949",
+          "sha1": "d6d5eedf4cb835fa50ef5ac20769303e2898a095",
+          "md5": "d32b856f1b95b78e16108f26b2a1017b"
+        }
+      ]
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "stately-concurrency",
+          "version": {
+            "requires": "1.2.3"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime-iossimulatorarm64-2.0.0-SNAPSHOT-metadata.jar",
+          "url": "runtime-iossimulatorarm64-2.0.0-SNAPSHOT-metadata.jar",
+          "size": 261,
+          "sha512": "5232d886b9a26bafd869c5d3ee8f848558b6e63d3eaae2d7c7273430c6201532f5cc898424df370334893bcd1d484e8142eb09e8595ad9d2a53cc45d194b208e",
+          "sha256": "9314d72e0ce8eb6cd1e8de3104b4e66d449a50ebdd1f0f4383a803b33ace66e7",
+          "sha1": "2064f29df3b4e821ccb4b72950756c0050f35f2d",
+          "md5": "e519367f1651bf6bb2ba31de8f3efb1c"
+        }
+      ]
+    }
+  ]
+}

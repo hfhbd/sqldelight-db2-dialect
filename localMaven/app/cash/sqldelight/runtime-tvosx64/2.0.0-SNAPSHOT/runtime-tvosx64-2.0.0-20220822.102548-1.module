@@ -1,0 +1,149 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../runtime/2.0.0-SNAPSHOT/runtime-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "runtime",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "tvosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "stately-concurrency",
+          "version": {
+            "requires": "1.2.3"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime.klib",
+          "url": "runtime-tvosx64-2.0.0-SNAPSHOT.klib",
+          "size": 49366,
+          "sha512": "1ae27a2798cc11c8fc0e9e77d665d3da13c279d56864a835608c1da9233f926cbd06e52878775972761b2c4a430bfc14ddc6c67a80bd19530b7b9b7b83b6f2e1",
+          "sha256": "0d844fc33a825a1933e5b5df5711fdbe3e87cb0133409fb58721e0f6c5276644",
+          "sha1": "eb428e7fb2a1ec6401b0b9a3b969f44b90115596",
+          "md5": "b578ce4f779a927dcfe4dffe2dd433ed"
+        }
+      ]
+    },
+    {
+      "name": "tvosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "stately-concurrency",
+          "version": {
+            "requires": "1.2.3"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime-tvosx64-2.0.0-SNAPSHOT-metadata.jar",
+          "url": "runtime-tvosx64-2.0.0-SNAPSHOT-metadata.jar",
+          "size": 261,
+          "sha512": "c0337045053d975fea88bed00e79b766b34b66bb4a162770b4b7aac66ee5d8f1d5147bb1f1025382c3a134731e90b8e3c5175e44553709f6334d61f53c07a41d",
+          "sha256": "f290043fdd17cd1967cf0fd04d9a8d5964885be89631a3aab72636a7e839aa9c",
+          "sha1": "211131fac2ae6df8772db80e1e08d5a9ee27dc47",
+          "md5": "b3b22c4757c2c00a20862786bf887839"
+        }
+      ]
+    }
+  ]
+}

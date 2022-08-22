@@ -1,0 +1,630 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "app.cash.sqldelight",
+    "module": "async-extensions",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.6.4"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "sqldelight-async-extensions-metadata-2.0.0-SNAPSHOT.jar",
+          "url": "async-extensions-2.0.0-SNAPSHOT.jar",
+          "size": 4868,
+          "sha512": "92bfe12e2a533393198c1768d0f154a5ec0ad6e057950643d151b67dc037e6066ab20f15eefa44900a67e1e6c2a420260a4bcc7914339243cb602143dde96bc6",
+          "sha256": "93b53adf2c1417a7929bb83fa4a81860bac2f454382d6813b8692bbf2140436e",
+          "sha1": "cfe714c80e7e721d90438d7ba022ce14361391ad",
+          "md5": "eb1cf5178232754df12e518e2125ea65"
+        }
+      ]
+    },
+    {
+      "name": "iosArm32ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-iosarm32/2.0.0-SNAPSHOT/async-extensions-iosarm32-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-iosarm32",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosArm32MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-iosarm32/2.0.0-SNAPSHOT/async-extensions-iosarm32-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-iosarm32",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-iosarm64/2.0.0-SNAPSHOT/async-extensions-iosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-iosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-iosarm64/2.0.0-SNAPSHOT/async-extensions-iosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-iosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-iossimulatorarm64/2.0.0-SNAPSHOT/async-extensions-iossimulatorarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-iossimulatorarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-iossimulatorarm64/2.0.0-SNAPSHOT/async-extensions-iossimulatorarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-iossimulatorarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-iosx64/2.0.0-SNAPSHOT/async-extensions-iosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-iosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-iosx64/2.0.0-SNAPSHOT/async-extensions-iosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-iosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "jsLegacyApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "legacy",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../async-extensions-js/2.0.0-SNAPSHOT/async-extensions-js-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-js",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "jsLegacyRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "legacy",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../async-extensions-js/2.0.0-SNAPSHOT/async-extensions-js-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-js",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "jsIrApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../async-extensions-js/2.0.0-SNAPSHOT/async-extensions-js-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-js",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "jsIrRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../async-extensions-js/2.0.0-SNAPSHOT/async-extensions-js-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-js",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../async-extensions-jvm/2.0.0-SNAPSHOT/async-extensions-jvm-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-jvm",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../async-extensions-jvm/2.0.0-SNAPSHOT/async-extensions-jvm-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-jvm",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "linuxX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-linuxx64/2.0.0-SNAPSHOT/async-extensions-linuxx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-linuxx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "macosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-macosarm64/2.0.0-SNAPSHOT/async-extensions-macosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-macosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "macosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-macosarm64/2.0.0-SNAPSHOT/async-extensions-macosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-macosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "macosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-macosx64/2.0.0-SNAPSHOT/async-extensions-macosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-macosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "macosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-macosx64/2.0.0-SNAPSHOT/async-extensions-macosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-macosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "mingwX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "mingw_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-mingwx64/2.0.0-SNAPSHOT/async-extensions-mingwx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-mingwx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "tvosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-tvosarm64/2.0.0-SNAPSHOT/async-extensions-tvosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-tvosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "tvosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-tvosarm64/2.0.0-SNAPSHOT/async-extensions-tvosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-tvosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "tvosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-tvossimulatorarm64/2.0.0-SNAPSHOT/async-extensions-tvossimulatorarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-tvossimulatorarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "tvosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-tvossimulatorarm64/2.0.0-SNAPSHOT/async-extensions-tvossimulatorarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-tvossimulatorarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "tvosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-tvosx64/2.0.0-SNAPSHOT/async-extensions-tvosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-tvosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "tvosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-tvosx64/2.0.0-SNAPSHOT/async-extensions-tvosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-tvosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosArm32ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-watchosarm32/2.0.0-SNAPSHOT/async-extensions-watchosarm32-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-watchosarm32",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosArm32MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-watchosarm32/2.0.0-SNAPSHOT/async-extensions-watchosarm32-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-watchosarm32",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-watchosarm64/2.0.0-SNAPSHOT/async-extensions-watchosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-watchosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-watchosarm64/2.0.0-SNAPSHOT/async-extensions-watchosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-watchosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-watchossimulatorarm64/2.0.0-SNAPSHOT/async-extensions-watchossimulatorarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-watchossimulatorarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-watchossimulatorarm64/2.0.0-SNAPSHOT/async-extensions-watchossimulatorarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-watchossimulatorarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-watchosx64/2.0.0-SNAPSHOT/async-extensions-watchosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-watchosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-watchosx64/2.0.0-SNAPSHOT/async-extensions-watchosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-watchosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosX86ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_x86",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-watchosx86/2.0.0-SNAPSHOT/async-extensions-watchosx86-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-watchosx86",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosX86MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_x86",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../async-extensions-watchosx86/2.0.0-SNAPSHOT/async-extensions-watchosx86-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "async-extensions-watchosx86",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    }
+  ]
+}

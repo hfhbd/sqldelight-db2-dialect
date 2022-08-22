@@ -1,0 +1,172 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "app.cash.sqldelight",
+    "module": "mysql-dialect",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "mysql",
+          "module": "mysql-connector-java",
+          "version": {
+            "requires": "8.0.30"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "mysql-dialect-2.0.0-SNAPSHOT.jar",
+          "url": "mysql-dialect-2.0.0-SNAPSHOT.jar",
+          "size": 2696352,
+          "sha512": "1fbb43dbfb628b291965dd54e10ee01310b016240e0c87ed77bc9cc2a6fe2951b10004b571086c577e1ca1baa01d14802e74678f504d98fec39370d3ca1870a8",
+          "sha256": "b859af2f5d55c43f4616c47ca64a1b1ada838c3899e84f4c7084a2341457adae",
+          "sha1": "57eed38b374c687f65a243c70d116f8d5a7e8579",
+          "md5": "3ac50fb99655c7f005bdaf4a5b6cdb54"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "mysql",
+          "module": "mysql-connector-java",
+          "version": {
+            "requires": "8.0.30"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "mysql-dialect-2.0.0-SNAPSHOT.jar",
+          "url": "mysql-dialect-2.0.0-SNAPSHOT.jar",
+          "size": 2696352,
+          "sha512": "1fbb43dbfb628b291965dd54e10ee01310b016240e0c87ed77bc9cc2a6fe2951b10004b571086c577e1ca1baa01d14802e74678f504d98fec39370d3ca1870a8",
+          "sha256": "b859af2f5d55c43f4616c47ca64a1b1ada838c3899e84f4c7084a2341457adae",
+          "sha1": "57eed38b374c687f65a243c70d116f8d5a7e8579",
+          "md5": "3ac50fb99655c7f005bdaf4a5b6cdb54"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "mysql-dialect-2.0.0-SNAPSHOT.jar",
+          "url": "mysql-dialect-2.0.0-SNAPSHOT.jar",
+          "size": 2696352,
+          "sha512": "1fbb43dbfb628b291965dd54e10ee01310b016240e0c87ed77bc9cc2a6fe2951b10004b571086c577e1ca1baa01d14802e74678f504d98fec39370d3ca1870a8",
+          "sha256": "b859af2f5d55c43f4616c47ca64a1b1ada838c3899e84f4c7084a2341457adae",
+          "sha1": "57eed38b374c687f65a243c70d116f8d5a7e8579",
+          "md5": "3ac50fb99655c7f005bdaf4a5b6cdb54"
+        }
+      ]
+    }
+  ]
+}

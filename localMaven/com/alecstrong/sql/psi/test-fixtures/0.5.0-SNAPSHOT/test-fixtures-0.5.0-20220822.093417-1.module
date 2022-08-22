@@ -1,0 +1,198 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.alecstrong.sql.psi",
+    "module": "test-fixtures",
+    "version": "0.5.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.alecstrong.sql.psi",
+          "module": "core",
+          "version": {
+            "requires": "0.5.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "junit",
+          "module": "junit",
+          "version": {
+            "requires": "4.13.2"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "com.jetbrains.intellij.platform",
+          "module": "lang-impl",
+          "version": {
+            "requires": "213.6777.52"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "com.jetbrains.intellij.platform",
+          "module": "core-impl",
+          "version": {
+            "requires": "213.6777.52"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "test-fixtures-0.5.0-SNAPSHOT.jar",
+          "url": "test-fixtures-0.5.0-SNAPSHOT.jar",
+          "size": 94715,
+          "sha512": "4fe7d6533ef7e9f56e7416fe0b20c2a200dea03c5cc5fa27677d67ae7cb40546b1aeb8e3d8e3ca3a1a46d25ce8f60c1d035f38a0e7cb78563c89517649d951c8",
+          "sha256": "bb48fc417dd097bd5801f0bcf9b7dcaa24953c75c65d6db0ffa0163fa701580a",
+          "sha1": "a89651c49df6178b24a59e8b5460ecaa64cb05a5",
+          "md5": "eba91812809c0a96ba4804beb011f983"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.alecstrong.sql.psi",
+          "module": "core",
+          "version": {
+            "requires": "0.5.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "junit",
+          "module": "junit",
+          "version": {
+            "requires": "4.13.2"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "com.jetbrains.intellij.platform",
+          "module": "lang-impl",
+          "version": {
+            "requires": "213.6777.52"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "com.jetbrains.intellij.platform",
+          "module": "core-impl",
+          "version": {
+            "requires": "213.6777.52"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "test-fixtures-0.5.0-SNAPSHOT.jar",
+          "url": "test-fixtures-0.5.0-SNAPSHOT.jar",
+          "size": 94715,
+          "sha512": "4fe7d6533ef7e9f56e7416fe0b20c2a200dea03c5cc5fa27677d67ae7cb40546b1aeb8e3d8e3ca3a1a46d25ce8f60c1d035f38a0e7cb78563c89517649d951c8",
+          "sha256": "bb48fc417dd097bd5801f0bcf9b7dcaa24953c75c65d6db0ffa0163fa701580a",
+          "sha1": "a89651c49df6178b24a59e8b5460ecaa64cb05a5",
+          "md5": "eba91812809c0a96ba4804beb011f983"
+        }
+      ]
+    }
+  ]
+}

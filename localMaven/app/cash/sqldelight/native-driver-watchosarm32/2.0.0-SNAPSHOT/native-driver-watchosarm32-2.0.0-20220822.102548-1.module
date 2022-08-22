@@ -1,0 +1,149 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../native-driver/2.0.0-SNAPSHOT/native-driver-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "native-driver",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "watchosArm32ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "sqliter-driver",
+          "version": {
+            "requires": "1.2.0"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "native-driver.klib",
+          "url": "native-driver-watchosarm32-2.0.0-SNAPSHOT.klib",
+          "size": 46725,
+          "sha512": "827726ea948fe24d0f2047d8abb9a95956de539c21848485ff2702a43ca1515836311d61568b6d946539f4392e7f59aedba1375baf8af2db030f07a9f66855c3",
+          "sha256": "b87edcb758bc433595f962e23f5aa2d0633e76c70608dcd036065b0df4dc7c92",
+          "sha1": "5a81760912a1169b7696d0fc5e33c5959797e2b8",
+          "md5": "e7cd0814bf4830a4db1a4cf9cda17ad8"
+        }
+      ]
+    },
+    {
+      "name": "watchosArm32MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "sqliter-driver",
+          "version": {
+            "requires": "1.2.0"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "native-driver-watchosarm32-2.0.0-SNAPSHOT-metadata.jar",
+          "url": "native-driver-watchosarm32-2.0.0-SNAPSHOT-metadata.jar",
+          "size": 6008,
+          "sha512": "aa5b88aa4fd459d4587cb7518b3fd851848ec51563136ca9f39b066467a287bf749c94cd192a5accb3675aa21d9b7bc1e9919ca3a5736298db8b397503204684",
+          "sha256": "4ba5654cb868ac4e2d178944142d4b9d71785a06c43645bcdaa9c30d42a69922",
+          "sha1": "a35134127ea11f6633599017ddb4f2b2842df2d9",
+          "md5": "591b321c8f99db2b06ede6c7d5d96f1e"
+        }
+      ]
+    }
+  ]
+}
