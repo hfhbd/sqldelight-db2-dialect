@@ -1,0 +1,94 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.alecstrong.sql.psi",
+    "module": "core",
+    "version": "0.5.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "core-0.5.0-SNAPSHOT.jar",
+          "url": "core-0.5.0-SNAPSHOT.jar",
+          "size": 555581,
+          "sha512": "00393bb2f49e022bd69b138a25a66b1a8726ab5aa2d039a00602af5d8bed362dfe94bdd6b5e0dedb879bb21aa7f8df8eca5f1700a9beac1dd622ead0bb01a231",
+          "sha256": "83a1e743f91065dc2b096dcbff5597f2a865cbc388098b077b2c0defd30e8056",
+          "sha1": "85e088e6bb2065f9d7625f143999669a2d378c10",
+          "md5": "5b6ed52d28ab3ae0f0a145042f33cb74"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "core-0.5.0-SNAPSHOT.jar",
+          "url": "core-0.5.0-SNAPSHOT.jar",
+          "size": 555581,
+          "sha512": "00393bb2f49e022bd69b138a25a66b1a8726ab5aa2d039a00602af5d8bed362dfe94bdd6b5e0dedb879bb21aa7f8df8eca5f1700a9beac1dd622ead0bb01a231",
+          "sha256": "83a1e743f91065dc2b096dcbff5597f2a865cbc388098b077b2c0defd30e8056",
+          "sha1": "85e088e6bb2065f9d7625f143999669a2d378c10",
+          "md5": "5b6ed52d28ab3ae0f0a145042f33cb74"
+        }
+      ]
+    }
+  ]
+}

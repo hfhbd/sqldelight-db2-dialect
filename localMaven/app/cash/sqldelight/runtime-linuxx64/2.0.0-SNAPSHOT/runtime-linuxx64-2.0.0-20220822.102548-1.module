@@ -1,0 +1,84 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../runtime/2.0.0-SNAPSHOT/runtime-2.0.0-SNAPSHOT.module",
+    "group": "app.cash.sqldelight",
+    "module": "runtime",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "linuxX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "co.touchlab",
+          "module": "stately-concurrency",
+          "version": {
+            "requires": "1.2.3"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime.klib",
+          "url": "runtime-linuxx64-2.0.0-SNAPSHOT.klib",
+          "size": 49343,
+          "sha512": "8d9c16925f673a147547196792b5f2e4c7be181e13269ef70aa633e104871610842952170e051459a3783c5eab398d94b2ae368a3171c97436a3bfd72b29e7a1",
+          "sha256": "cb3bb6d97ca5391edbe55184b494225b4b0c761a049ba65bd5768cf4c0c2edf5",
+          "sha1": "be67c247851a2c9058ac6460cece413986439295",
+          "md5": "ec4bbf687a63c7ad2ed2d7a6ebdf36fc"
+        }
+      ]
+    }
+  ]
+}

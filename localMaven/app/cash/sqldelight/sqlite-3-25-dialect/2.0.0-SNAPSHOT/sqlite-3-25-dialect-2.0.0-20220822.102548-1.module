@@ -1,0 +1,172 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "app.cash.sqldelight",
+    "module": "sqlite-3-25-dialect",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "sqlite-3-24-dialect",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "sqlite-3-25-dialect-2.0.0-SNAPSHOT.jar",
+          "url": "sqlite-3-25-dialect-2.0.0-SNAPSHOT.jar",
+          "size": 147672,
+          "sha512": "7b8c1dafd160dde8ee56fed8c957437fae79c80f560d70839aa8b9de4a668e7f9becc711726ed65dca987016ee6e3f7a969f6e4b6f92749a5f37d1a57f54b4ad",
+          "sha256": "5119f14b9c762cdaa8474ea24e444c5539418478e71e2bf5b1c86a1ebb4c5100",
+          "sha1": "b83f89ad46cd34e0a2053a7285f3175b4f84494e",
+          "md5": "8937de76dd6bd57cc5b575f0ed4dd6e6"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "sqlite-3-24-dialect",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "sqlite-3-25-dialect-2.0.0-SNAPSHOT.jar",
+          "url": "sqlite-3-25-dialect-2.0.0-SNAPSHOT.jar",
+          "size": 147672,
+          "sha512": "7b8c1dafd160dde8ee56fed8c957437fae79c80f560d70839aa8b9de4a668e7f9becc711726ed65dca987016ee6e3f7a969f6e4b6f92749a5f37d1a57f54b4ad",
+          "sha256": "5119f14b9c762cdaa8474ea24e444c5539418478e71e2bf5b1c86a1ebb4c5100",
+          "sha1": "b83f89ad46cd34e0a2053a7285f3175b4f84494e",
+          "md5": "8937de76dd6bd57cc5b575f0ed4dd6e6"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "sqlite-3-25-dialect-2.0.0-SNAPSHOT.jar",
+          "url": "sqlite-3-25-dialect-2.0.0-SNAPSHOT.jar",
+          "size": 147672,
+          "sha512": "7b8c1dafd160dde8ee56fed8c957437fae79c80f560d70839aa8b9de4a668e7f9becc711726ed65dca987016ee6e3f7a969f6e4b6f92749a5f37d1a57f54b4ad",
+          "sha256": "5119f14b9c762cdaa8474ea24e444c5539418478e71e2bf5b1c86a1ebb4c5100",
+          "sha1": "b83f89ad46cd34e0a2053a7285f3175b4f84494e",
+          "md5": "8937de76dd6bd57cc5b575f0ed4dd6e6"
+        }
+      ]
+    }
+  ]
+}

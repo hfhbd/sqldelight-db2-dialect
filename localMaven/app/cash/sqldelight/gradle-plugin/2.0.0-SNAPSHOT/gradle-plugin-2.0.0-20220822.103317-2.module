@@ -1,0 +1,243 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "app.cash.sqldelight",
+    "module": "gradle-plugin",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.alecstrong.sql.psi",
+          "module": "core",
+          "version": {
+            "requires": "0.5.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-jdk8"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "gradle-plugin-2.0.0-SNAPSHOT.jar",
+          "url": "gradle-plugin-2.0.0-SNAPSHOT.jar",
+          "size": 19016747,
+          "sha512": "875f4290396f88c929d06a1eef30f85a0a1c74f6772e31e32bf8a2c5111ded3e87425a516912bb5ab4a5aa635b19f1e3219d34a872cafa0a19acb4159aa1da5b",
+          "sha256": "176256dc0e4e2cfa634391c54dcda4fa2714f2f118343e15f9965cbeb014dece",
+          "sha1": "2832918ee560f839f308fcea6253174f94075cb3",
+          "md5": "fcf3dff0330e796524737c294071f252"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.xerial",
+          "module": "sqlite-jdbc",
+          "version": {
+            "requires": "3.39.2.0"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "de.danielbechler",
+          "module": "java-object-diff",
+          "version": {
+            "requires": "0.95"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "us.fatehi",
+          "module": "schemacrawler-tools",
+          "version": {
+            "requires": "16.17.4"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "us.fatehi",
+          "module": "schemacrawler-sqlite",
+          "version": {
+            "requires": "16.17.4"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-gradle-plugin",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "com.alecstrong.sql.psi",
+          "module": "core",
+          "version": {
+            "requires": "0.5.0-SNAPSHOT"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            },
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "kotlin-stdlib-jdk8"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "gradle-plugin-2.0.0-SNAPSHOT.jar",
+          "url": "gradle-plugin-2.0.0-SNAPSHOT.jar",
+          "size": 19016747,
+          "sha512": "875f4290396f88c929d06a1eef30f85a0a1c74f6772e31e32bf8a2c5111ded3e87425a516912bb5ab4a5aa635b19f1e3219d34a872cafa0a19acb4159aa1da5b",
+          "sha256": "176256dc0e4e2cfa634391c54dcda4fa2714f2f118343e15f9965cbeb014dece",
+          "sha1": "2832918ee560f839f308fcea6253174f94075cb3",
+          "md5": "fcf3dff0330e796524737c294071f252"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "gradle-plugin-2.0.0-SNAPSHOT.jar",
+          "url": "gradle-plugin-2.0.0-SNAPSHOT.jar",
+          "size": 19016747,
+          "sha512": "875f4290396f88c929d06a1eef30f85a0a1c74f6772e31e32bf8a2c5111ded3e87425a516912bb5ab4a5aa635b19f1e3219d34a872cafa0a19acb4159aa1da5b",
+          "sha256": "176256dc0e4e2cfa634391c54dcda4fa2714f2f118343e15f9965cbeb014dece",
+          "sha1": "2832918ee560f839f308fcea6253174f94075cb3",
+          "md5": "fcf3dff0330e796524737c294071f252"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,549 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "app.cash.sqldelight",
+    "module": "native-driver",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "app.cash.sqldelight",
+          "module": "runtime",
+          "version": {
+            "requires": "2.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "co.touchlab",
+          "module": "sqliter-driver",
+          "version": {
+            "requires": "1.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "native-driver-metadata-2.0.0-SNAPSHOT.jar",
+          "url": "native-driver-2.0.0-SNAPSHOT.jar",
+          "size": 21986,
+          "sha512": "76d6bdd8bcd9407dd16bae1c1c16aad89d352e4ce4d4dc63c0bf907f330325dfc478693af796dd05a4b64f4e4b6b65066e05122be1894759044d2e71efe5daab",
+          "sha256": "b86604e6dbbc3a02396f2c0892be4f8c50c01b9cdbcd7837be57d8fac0dda500",
+          "sha1": "9766541717b83223ad956c12447408a1a8b74e0f",
+          "md5": "46d8fb0f148f8d55addf8e4e5c818e8d"
+        }
+      ]
+    },
+    {
+      "name": "iosArm32ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-iosarm32/2.0.0-SNAPSHOT/native-driver-iosarm32-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-iosarm32",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosArm32MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-iosarm32/2.0.0-SNAPSHOT/native-driver-iosarm32-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-iosarm32",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-iosarm64/2.0.0-SNAPSHOT/native-driver-iosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-iosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-iosarm64/2.0.0-SNAPSHOT/native-driver-iosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-iosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-iossimulatorarm64/2.0.0-SNAPSHOT/native-driver-iossimulatorarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-iossimulatorarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-iossimulatorarm64/2.0.0-SNAPSHOT/native-driver-iossimulatorarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-iossimulatorarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-iosx64/2.0.0-SNAPSHOT/native-driver-iosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-iosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-iosx64/2.0.0-SNAPSHOT/native-driver-iosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-iosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "linuxX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-linuxx64/2.0.0-SNAPSHOT/native-driver-linuxx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-linuxx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "macosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-macosarm64/2.0.0-SNAPSHOT/native-driver-macosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-macosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "macosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-macosarm64/2.0.0-SNAPSHOT/native-driver-macosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-macosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "macosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-macosx64/2.0.0-SNAPSHOT/native-driver-macosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-macosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "macosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-macosx64/2.0.0-SNAPSHOT/native-driver-macosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-macosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "mingwX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "mingw_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-mingwx64/2.0.0-SNAPSHOT/native-driver-mingwx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-mingwx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "mingwX86ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "mingw_x86",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-mingwx86/2.0.0-SNAPSHOT/native-driver-mingwx86-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-mingwx86",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "tvosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-tvosarm64/2.0.0-SNAPSHOT/native-driver-tvosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-tvosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "tvosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-tvosarm64/2.0.0-SNAPSHOT/native-driver-tvosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-tvosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "tvosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-tvossimulatorarm64/2.0.0-SNAPSHOT/native-driver-tvossimulatorarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-tvossimulatorarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "tvosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-tvossimulatorarm64/2.0.0-SNAPSHOT/native-driver-tvossimulatorarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-tvossimulatorarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "tvosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-tvosx64/2.0.0-SNAPSHOT/native-driver-tvosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-tvosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "tvosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-tvosx64/2.0.0-SNAPSHOT/native-driver-tvosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-tvosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosArm32ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-watchosarm32/2.0.0-SNAPSHOT/native-driver-watchosarm32-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-watchosarm32",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosArm32MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-watchosarm32/2.0.0-SNAPSHOT/native-driver-watchosarm32-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-watchosarm32",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-watchosarm64/2.0.0-SNAPSHOT/native-driver-watchosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-watchosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-watchosarm64/2.0.0-SNAPSHOT/native-driver-watchosarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-watchosarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-watchossimulatorarm64/2.0.0-SNAPSHOT/native-driver-watchossimulatorarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-watchossimulatorarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-watchossimulatorarm64/2.0.0-SNAPSHOT/native-driver-watchossimulatorarm64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-watchossimulatorarm64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-watchosx64/2.0.0-SNAPSHOT/native-driver-watchosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-watchosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-watchosx64/2.0.0-SNAPSHOT/native-driver-watchosx64-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-watchosx64",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosX86ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_x86",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-watchosx86/2.0.0-SNAPSHOT/native-driver-watchosx86-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-watchosx86",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    },
+    {
+      "name": "watchosX86MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_x86",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../native-driver-watchosx86/2.0.0-SNAPSHOT/native-driver-watchosx86-2.0.0-SNAPSHOT.module",
+        "group": "app.cash.sqldelight",
+        "module": "native-driver-watchosx86",
+        "version": "2.0.0-SNAPSHOT"
+      }
+    }
+  ]
+}

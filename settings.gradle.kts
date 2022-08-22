@@ -1,6 +1,14 @@
-rootProject.name = "sqldelight-db2-dialect"
+pluginManagement {
+    repositories {
+        maven(url ="file://${rootDir.absolutePath}/localMaven")
+        gradlePluginPortal()
+    }
+}
 
-include(":dialect")
-project(":dialect").name = "sqldelight-db2-dialect"
+rootProject.name = "sqldelight-db2"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+include(":sqldelight-db2-dialect")
 
 include(":testing")

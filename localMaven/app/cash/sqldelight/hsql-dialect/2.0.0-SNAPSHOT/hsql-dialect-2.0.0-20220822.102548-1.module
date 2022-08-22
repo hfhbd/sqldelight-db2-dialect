@@ -1,0 +1,110 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "app.cash.sqldelight",
+    "module": "hsql-dialect",
+    "version": "2.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "hsql-dialect-2.0.0-SNAPSHOT.jar",
+          "url": "hsql-dialect-2.0.0-SNAPSHOT.jar",
+          "size": 107400,
+          "sha512": "77610d835c51633db5037c64e06391cb427f5e58a7af1700f693af358e308c03768937cb568b539de1ac0097be2dfb917a69c136ae19fa8d3597d1b0fc962446",
+          "sha256": "a1419c42b0a4170c2ad465ce7689008eb03679248e3042b889491d00d9bfe6b5",
+          "sha1": "8a55bca6e0faac3c943398e39d2c340998419590",
+          "md5": "dd7c811b96ae417c5444d8e63a6864f4"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          },
+          "excludes": [
+            {
+              "group": "com.jetbrains.rd",
+              "module": "*"
+            },
+            {
+              "group": "com.github.jetbrains",
+              "module": "jetCheck"
+            },
+            {
+              "group": "org.roaringbitmap",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "hsql-dialect-2.0.0-SNAPSHOT.jar",
+          "url": "hsql-dialect-2.0.0-SNAPSHOT.jar",
+          "size": 107400,
+          "sha512": "77610d835c51633db5037c64e06391cb427f5e58a7af1700f693af358e308c03768937cb568b539de1ac0097be2dfb917a69c136ae19fa8d3597d1b0fc962446",
+          "sha256": "a1419c42b0a4170c2ad465ce7689008eb03679248e3042b889491d00d9bfe6b5",
+          "sha1": "8a55bca6e0faac3c943398e39d2c340998419590",
+          "md5": "dd7c811b96ae417c5444d8e63a6864f4"
+        }
+      ]
+    }
+  ]
+}
