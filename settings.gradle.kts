@@ -1,8 +1,14 @@
 pluginManagement {
     repositories {
-        maven(url ="file://${rootDir.absolutePath}/localMaven")
+        mavenCentral()
         gradlePluginPortal()
+        maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
     }
+    includeBuild("build-logic")
+}
+
+plugins {
+    id("MyRepos")
 }
 
 rootProject.name = "sqldelight-db2"

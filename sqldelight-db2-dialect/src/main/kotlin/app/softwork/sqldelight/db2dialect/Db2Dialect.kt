@@ -13,13 +13,6 @@ public class Db2Dialect : SqlDelightDialect {
         SqlParserUtil.reset()
         Db2ParserUtil.reset()
         Db2ParserUtil.overrideSqlParser()
-
-        val currentElementCreation = Db2ParserUtil.createElement
-        Db2ParserUtil.createElement = {
-            when (it.elementType) {
-                else -> currentElementCreation(it)
-            }
-        }
     }
 
     override fun typeResolver(parentResolver: TypeResolver): TypeResolver = Db2TypeResolver(parentResolver)

@@ -10,7 +10,7 @@ new:
 INSERT INTO foo VALUES ?;
 
 create:
-INSERT INTO foo (name) VALUES ?;
+INSERT INTO foo (id, name) VALUES ?;
 
 embedded:
 SELECT * INTO :id, :name FROM foo;
