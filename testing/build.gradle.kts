@@ -4,7 +4,7 @@ plugins {
 }
 
 dependencies {
-    implementation("app.cash.sqldelight:jdbc-driver:2.0.0-alpha03")
+    implementation("app.cash.sqldelight:jdbc-driver:2.0.0-alpha04")
 
     testImplementation(kotlin("test-junit"))
     testImplementation("org.testcontainers:db2:1.17.4")
