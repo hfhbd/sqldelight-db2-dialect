@@ -8,7 +8,7 @@ dependencies {
 
     testImplementation(kotlin("test-junit"))
     testImplementation("org.testcontainers:db2:1.17.5")
-    testImplementation("com.ibm.db2:jcc:11.5.7.0")
+    testImplementation("com.ibm.db2:jcc:11.5.8.0")
     testRuntimeOnly("ch.qos.logback:logback-classic:1.4.4")
 }
 
