@@ -7,7 +7,7 @@ plugins {
     id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.12.0" apply false
     id("com.github.johnrengelman.shadow") version "7.1.2" apply false
     id("app.cash.sqldelight") version "2.0.0-SNAPSHOT" apply false
-    id("app.cash.licensee") version "1.5.0" apply false
+    id("app.cash.licensee") version "1.6.0" apply false
 }
 
 allprojects {
