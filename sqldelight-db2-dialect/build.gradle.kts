@@ -19,7 +19,7 @@ java {
     withSourcesJar()
 }
 
-val idea = "211.7628.21"
+val idea = "222.4459.24"
 
 grammarKit {
     intellijRelease.set(idea)
