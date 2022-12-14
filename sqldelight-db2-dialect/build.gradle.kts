@@ -15,8 +15,6 @@ grammarKit {
 }
 
 dependencies {
-   // grammar("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-
     implementation("app.softwork.sql.psi:core:0.5.0-SNAPSHOT")
     implementation("app.cash.sqldelight:dialect-api:2.0.0-SNAPSHOT") {
         exclude("com.alecstrong.sql.psi")
@@ -25,7 +23,7 @@ dependencies {
     compileOnly("com.jetbrains.intellij.platform:ide-impl:$idea")
 
     testImplementation(kotlin("test"))
-   // testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     testImplementation("com.jetbrains.intellij.platform:ide-impl:$idea")
     testImplementation("app.softwork.sql.psi:test-fixtures:0.5.0-SNAPSHOT")
 }
@@ -50,6 +48,8 @@ kotlin {
 java {
     withJavadocJar()
     withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 licensee {
