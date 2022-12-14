@@ -1,5 +1,3 @@
-import org.jetbrains.grammarkit.tasks.*
-
 plugins {
     kotlin("jvm")
     com.alecstrong.grammar.kit.composer
@@ -10,36 +8,26 @@ plugins {
     exclude
 }
 
-val idea = "213.6777.52"
+val idea = "221.6008.13"
 
 grammarKit {
     intellijRelease.set(idea)
 }
 
-val grammar: Configuration by configurations.creating {
-    isCanBeResolved = true
-    isCanBeConsumed = false
-}
-
 dependencies {
    // grammar("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
 
-    implementation("com.alecstrong.sql.psi:core:0.5.0-SNAPSHOT")
-    implementation("app.cash.sqldelight:dialect-api:2.0.0-SNAPSHOT")
+    implementation("app.softwork.sql.psi:core:0.5.0-SNAPSHOT")
+    implementation("app.cash.sqldelight:dialect-api:2.0.0-SNAPSHOT") {
+        exclude("com.alecstrong.sql.psi")
+    }
 
     compileOnly("com.jetbrains.intellij.platform:ide-impl:$idea")
 
     testImplementation(kotlin("test"))
    // testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-    testImplementation("app.cash.sqldelight:dialect-api:2.0.0-SNAPSHOT")
     testImplementation("com.jetbrains.intellij.platform:ide-impl:$idea")
-    testImplementation("com.alecstrong.sql.psi:test-fixtures:0.5.0-SNAPSHOT")
-}
-
-tasks {
-    withType<GenerateParserTask>().configureEach {
-       // classpath.from(grammar)
-    }
+    testImplementation("app.softwork.sql.psi:test-fixtures:0.5.0-SNAPSHOT")
 }
 
 kotlin {
@@ -48,7 +36,7 @@ kotlin {
     target.compilations.all {
         kotlinOptions {
             allWarningsAsErrors = true
-            jvmTarget = "1.8"
+            jvmTarget = "11"
         }
     }
 

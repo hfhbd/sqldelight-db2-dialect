@@ -20,6 +20,9 @@ internal abstract class Db2SelectStmtMixin(
 ) : SqlSelectStmtImpl(node),
   Db2SelectStmt,
   FromQuery {
+  override fun getSelectIntoClause(): Db2SelectIntoClause? {
+    TODO("Not yet implemented")
+  }
   /**
    * During some resolution steps we don't care about the parent's projection and can safely ignore
    * it to avoid recursing too far.
