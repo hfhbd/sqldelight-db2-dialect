@@ -31,5 +31,5 @@ jobs:
         env:
           SIGNING_PRIVATE_KEY: ${{ secrets.SIGNING_PRIVATE_KEY }}
           SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
-          SONARTYPE_APIKEY: ${{ secrets.SONARTYPE_APIKEY }}
-          SONARTYPE_APITOKEN: ${{ secrets.SONARTYPE_APITOKEN }}
+          ORG_GRADLE_PROJECT_sonatypeUsername: ${{ secrets.SONARTYPE_APIKEY }}
+          ORG_GRADLE_PROJECT_sonatypePassword: ${{ secrets.SONARTYPE_APITOKEN }}
