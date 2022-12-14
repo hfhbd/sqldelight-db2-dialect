@@ -18,4 +18,4 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 include(":sqldelight-db2-dialect")
 
-include(":testing")
+// include(":testing")
