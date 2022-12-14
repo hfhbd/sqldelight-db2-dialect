@@ -15,7 +15,7 @@ grammarKit {
 }
 
 dependencies {
-    implementation("app.softwork.sql.psi:core:0.5.0-SNAPSHOT")
+    api("app.softwork.sql.psi:core:0.5.0-SNAPSHOT")
     implementation("app.cash.sqldelight:dialect-api:2.0.0-SNAPSHOT") {
         exclude("com.alecstrong.sql.psi")
     }
