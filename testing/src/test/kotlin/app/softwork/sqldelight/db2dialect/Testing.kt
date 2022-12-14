@@ -14,6 +14,6 @@ class Testing {
         assertEquals(listOf(Foo(42, "Foo")), db.fooQueries.getAll().executeAsList())
 
         db.fooQueries.create(Foo(100, "Bar"))
-        assertEquals(listOf(Foo(42, "Foo"), Foo(1, "Bar")), db.fooQueries.getAll().executeAsList())
+        assertEquals(listOf(Foo(42, "Foo"), Foo(100, "Bar")), db.fooQueries.getAll().executeAsList())
     }
 }

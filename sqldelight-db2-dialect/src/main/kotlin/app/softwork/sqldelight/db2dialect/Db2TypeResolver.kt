@@ -8,21 +8,31 @@ internal class Db2TypeResolver(private val parentResolver: TypeResolver) : TypeR
     override fun definitionType(typeName: SqlTypeName): IntermediateType {
         check(typeName is Db2TypeName)
         with(typeName) {
-            return when {
-                approximateNumericDataType != null -> IntermediateType(PrimitiveType.REAL)
-                binaryStringDataType != null -> IntermediateType(PrimitiveType.BLOB)
-                dateDataType != null -> IntermediateType(PrimitiveType.TEXT)
-                tinyIntDataType != null -> IntermediateType(Db2Type.TINY_INT)
-                smallIntDataType != null -> IntermediateType(Db2Type.SMALL_INT)
-                intDataType != null -> IntermediateType(Db2Type.INTEGER)
-                bigIntDataType != null -> IntermediateType(Db2Type.BIG_INT)
-                fixedPointDataType != null -> IntermediateType(PrimitiveType.INTEGER)
-                characterStringDataType != null -> IntermediateType(PrimitiveType.TEXT)
-                booleanDataType != null -> IntermediateType(Db2Type.BOOL)
-                bitStringDataType != null -> IntermediateType(PrimitiveType.BLOB)
-                intervalDataType != null -> IntermediateType(PrimitiveType.BLOB)
+            return IntermediateType(when {
+                approximateNumericDataType != null -> PrimitiveType.REAL
+                binaryStringDataType != null -> PrimitiveType.BLOB
+                dateDataType != null -> {
+                    when (dateDataType!!.firstChild.text) {
+                        "DATE" -> Db2Type.DATE
+                        "TIME" -> Db2Type.TIME
+                        "TIMESTAMP" -> if (dateDataType!!.node.getChildren(null)
+                                .any { it.text == "WITH" }
+                        ) Db2Type.TIMESTAMP_TIMEZONE else Db2Type.TIMESTAMP
+                        "TIMESTAMPTZ" -> Db2Type.TIMESTAMP_TIMEZONE
+                        else -> throw IllegalArgumentException("Unknown date type ${dateDataType!!.text}")
+                    }
+                }
+                tinyIntDataType != null -> Db2Type.TINY_INT
+                smallIntDataType != null -> Db2Type.SMALL_INT
+                intDataType != null -> Db2Type.INTEGER
+                bigIntDataType != null -> Db2Type.BIG_INT
+                fixedPointDataType != null -> PrimitiveType.INTEGER
+                characterStringDataType != null -> PrimitiveType.TEXT
+                booleanDataType != null -> Db2Type.BOOL
+                bitStringDataType != null -> PrimitiveType.BLOB
+                intervalDataType != null -> PrimitiveType.BLOB
                 else -> throw IllegalArgumentException("Unknown kotlin type for sql type ${typeName.text}")
-            }
+            })
         }
     }
 
