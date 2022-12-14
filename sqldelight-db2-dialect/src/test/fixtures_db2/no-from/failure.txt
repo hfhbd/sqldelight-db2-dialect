@@ -1,1 +1,1 @@
-Test.s line 12:10 - Cannot bind 2 host variables to 1 result columns
+1.s line 8:0 - 'SELECT' unexpected

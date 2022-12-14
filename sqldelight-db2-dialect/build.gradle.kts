@@ -24,7 +24,9 @@ dependencies {
 
     testImplementation(kotlin("test"))
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-    testImplementation("com.jetbrains.intellij.platform:ide-impl:$idea")
+    testImplementation("com.jetbrains.intellij.platform:ide-impl:$idea") {
+        exclude(group ="org.jetbrains.kotlinx", module = "kotlinx-coroutines-core")
+    }
     testImplementation("app.softwork.sql.psi:test-fixtures:0.5.0-SNAPSHOT")
 }
 
