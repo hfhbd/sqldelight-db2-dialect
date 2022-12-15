@@ -44,10 +44,14 @@
 overrides ::= type_name | generated_clause | bind_parameter | select_stmt | bind_expr | extension_stmt
 
 extension_stmt ::= set_stmt {
+  extends = "com.alecstrong.sql.psi.core.psi.impl.SqlExtensionStmtImpl"
+  implements = "com.alecstrong.sql.psi.core.psi.SqlExtensionStmt"
   override = true
 }
 
 bind_expr ::= bind_parameter | host_variable {
+  extends = "com.alecstrong.sql.psi.core.psi.impl.SqlBindExprImpl"
+  implements = "com.alecstrong.sql.psi.core.psi.SqlBindExpr"
   override = true
 }
 
