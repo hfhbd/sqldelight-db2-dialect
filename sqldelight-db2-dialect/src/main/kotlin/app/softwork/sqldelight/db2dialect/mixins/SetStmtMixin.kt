@@ -8,14 +8,6 @@ import com.intellij.lang.ASTNode
 import com.intellij.psi.PsiElement
 import com.intellij.psi.util.PsiTreeUtil
 
-
-private fun PsiElement.printTree(printer: (String) -> Unit) {
-  printer("$this\n")
-  children.forEach { child ->
-    child.printTree { printer("  $it") }
-  }
-}
-
 internal abstract class SetStmtMixin(
   node: ASTNode,
 ) : SqlCompositeElementImpl(node),
@@ -26,9 +18,6 @@ internal abstract class SetStmtMixin(
   private val Db2SetSetterClause.exprList: List<SqlExpr> get() = PsiTreeUtil.getChildrenOfTypeAsList(this, SqlExpr::class.java)
 
   override fun queryAvailable(child: PsiElement): Collection<QueryResult> {
-    if (compoundSelectStmt == null && setSetterClause == null) {
-      return emptyList()
-    }
     val compoundSelectStmt = compoundSelectStmt ?: return setSetterClause!!.exprList.map {
       QueryResult(it)
     }
@@ -61,11 +50,6 @@ internal abstract class SetStmtMixin(
   override fun annotate(annotationHolder: SqlAnnotationHolder) {
     val select = compoundSelectStmt
     if (select != null) {
-      println(select.selectStmtList.size)
-      val f = select.selectStmtList
-      printTree { print(it) }
-      select.printTree { print(it) }
-      println(f)
       select.annotate(annotationHolder)
       for (sqlSelectStmt in select.selectStmtList) {
         val selectInto = (sqlSelectStmt as Db2SelectStmt).selectIntoClause
