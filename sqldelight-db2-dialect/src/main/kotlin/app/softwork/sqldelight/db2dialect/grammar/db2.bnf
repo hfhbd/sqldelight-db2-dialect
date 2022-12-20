@@ -55,6 +55,7 @@ bind_expr ::= bind_parameter | host_variable {
   override = true
 }
 
+// https://www.ibm.com/docs/en/i/7.1?topic=statements-select-into
 select_into_clause ::= INTO host_variable ( COMMA host_variable ) * {
   pin = 1
 }
