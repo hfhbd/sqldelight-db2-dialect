@@ -5,6 +5,7 @@ public final class app/softwork/sqldelight/db2dialect/Db2Dialect : app/cash/sqld
 	public fun getConnectionManager ()Lapp/cash/sqldelight/dialect/api/ConnectionManager;
 	public fun getIcon ()Ljavax/swing/Icon;
 	public fun getMigrationStrategy ()Lapp/cash/sqldelight/dialect/api/SqlGeneratorStrategy;
+	public final fun getPredefinedSystemTables ()Ljava/util/List;
 	public fun getRuntimeTypes ()Lapp/cash/sqldelight/dialect/api/RuntimeTypes;
 	public fun isSqlite ()Z
 	public fun migrationSquasher (Lapp/cash/sqldelight/dialect/api/MigrationSquasher;)Lapp/cash/sqldelight/dialect/api/MigrationSquasher;
