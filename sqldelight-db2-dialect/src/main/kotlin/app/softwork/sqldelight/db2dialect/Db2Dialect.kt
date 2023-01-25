@@ -24,4 +24,19 @@ public class Db2Dialect : SqlDelightDialect {
 
     override val asyncRuntimeTypes: RuntimeTypes
         get() = throw UnsupportedOperationException("DB2 does not support an async driver")
+
+    /**
+     * Specify predefined system tables in SQL
+     */
+    public val predefinedSystemTables: List<PredefinedTable> get() = listOf(
+        PredefinedTable(
+            packageName = "db2.predefined",
+            simpleFileName = "sq",
+            content = """
+                CREATE TABLE SYSIBM.SYSDUMMY1 (
+                  IBMREQD CHAR(1) NOT NULL
+                );
+            """.trimIndent()
+        )
+    )
 }

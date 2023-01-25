@@ -11,16 +11,10 @@ plugins {
 val emptyJar by tasks.registering(Jar::class)
 
 publishing {
-    repositories {
-        maven(url = "https://maven.pkg.github.com/hfhbd/kobol") {
-            name = "GitHubPackages"
-            credentials(PasswordCredentials::class)
-        }
-    }
     publications.register<MavenPublication>("mavenJava") {
         from(components["java"])
     }
-    publications.all {
+    publications.configureEach {
         this as MavenPublication
         artifact(emptyJar) {
             classifier = "javadoc"

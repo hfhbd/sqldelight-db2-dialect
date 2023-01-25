@@ -1,11 +1,13 @@
 import org.gradle.api.*
 import org.gradle.api.artifacts.dsl.*
 import org.gradle.api.initialization.*
+import org.gradle.api.initialization.resolve.*
 import org.gradle.kotlin.dsl.*
 
 class MyRepos : Plugin<Settings> {
     override fun apply(settings: Settings) {
         settings.dependencyResolutionManagement {
+            repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
             repositories {
                 repos()
             }
@@ -15,7 +17,6 @@ class MyRepos : Plugin<Settings> {
 
 fun RepositoryHandler.repos() {
     maven(url = "https://s01.oss.sonatype.org/content/repositories/snapshots")
-    maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
     mavenCentral()
 
     maven(url = "https://www.jetbrains.com/intellij-repository/releases")
