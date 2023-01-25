@@ -56,6 +56,7 @@ bind_expr ::= bind_parameter | host_variable {
 }
 
 select_into_clause ::= INTO host_variable ( COMMA host_variable ) * {
+  // https://www.ibm.com/docs/en/i/7.1?topic=statements-select-into
   pin = 1
 }
 
@@ -168,7 +169,7 @@ end_field ::= non_second_primary_datetime_field | 'SECOND' [ LP digit RP ]
 single_datetime_field ::= non_second_primary_datetime_field [ LP digit RP ] | 'SECOND' [ LP digit [ COMMA digit ] RP ]
 non_second_primary_datetime_field ::= 'YEAR' | 'MONTH' | 'DAY' | 'HOUR' | 'MINUTE'
 
-bind_parameter ::= (':' {identifier}) | '?' {
+bind_parameter ::= '?' | ':' {identifier} {
   extends = "com.alecstrong.sql.psi.core.psi.impl.SqlBindParameterImpl"
   implements = "com.alecstrong.sql.psi.core.psi.SqlBindParameter"
   override = true
