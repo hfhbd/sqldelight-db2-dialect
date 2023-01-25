@@ -1,11 +1,10 @@
 plugins {
     kotlin("jvm")
     app.cash.sqldelight
-    repos
 }
 
 dependencies {
-    implementation("app.cash.sqldelight:jdbc-driver:2.0.0-SNAPSHOT")
+    implementation("app.cash.sqldelight:jdbc-driver:2.0.0-alpha05")
 
     testImplementation(kotlin("test"))
     testImplementation("org.testcontainers:db2:1.17.6")
@@ -14,8 +13,8 @@ dependencies {
 }
 
 sqldelight {
-    database("TestingDB") {
+    databases.register("TestingDB") {
         dialect(projects.sqldelightDb2Dialect)
-        packageName = "app.softwork.sqldelight.db2dialect"
+        packageName.set("app.softwork.sqldelight.db2dialect")
     }
 }
