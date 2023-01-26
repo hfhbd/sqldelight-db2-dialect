@@ -13,6 +13,15 @@ public final class app/softwork/sqldelight/db2dialect/Db2Dialect : app/cash/sqld
 	public fun typeResolver (Lapp/cash/sqldelight/dialect/api/TypeResolver;)Lapp/cash/sqldelight/dialect/api/TypeResolver;
 }
 
+public final class app/softwork/sqldelight/db2dialect/SetQueryWithResults : app/cash/sqldelight/dialect/api/QueryWithResults {
+	public fun <init> (Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2SetStmt;)V
+	public fun getPureTable ()Lcom/alecstrong/sql/psi/core/psi/NamedElement;
+	public fun getSelect ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2SetStmt;
+	public synthetic fun getSelect ()Lcom/alecstrong/sql/psi/core/psi/QueryElement;
+	public fun getStatement ()Lcom/alecstrong/sql/psi/core/psi/SqlAnnotatedElement;
+	public fun setStatement (Lcom/alecstrong/sql/psi/core/psi/SqlAnnotatedElement;)V
+}
+
 public class app/softwork/sqldelight/db2dialect/grammar/Db2Parser : com/intellij/lang/LightPsiParser, com/intellij/lang/PsiParser {
 	public fun <init> ()V
 	public static fun approximate_numeric_data_type_real (Lcom/intellij/lang/PsiBuilder;I)Z
