@@ -15,7 +15,7 @@ SET :FOO = SELECT first_name, last_name FROM hockey_player WHERE _id = :A;
 -- Failing
 SET :FOO, :BAR = SELECT first_name FROM hockey_player WHERE _id = :A;
 
--- hockey_player contains 3 columns, should work
+-- hockey_player contains 3 columns, stupid, but should work
 SET :FOO, :BAR = SELECT * FROM hockey_player;
 
 -- Should fail

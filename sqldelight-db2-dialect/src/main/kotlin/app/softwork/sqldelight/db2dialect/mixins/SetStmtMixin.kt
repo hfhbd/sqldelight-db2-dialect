@@ -30,11 +30,11 @@ internal abstract class SetStmtMixin(
     val queryExposed = compoundSelectStmt?.queryExposed() ?: setSetterClause!!.exprList.map {
       QueryResult(it)
     }
-    val columnNames = this.hostVariableList
+    val columnNames: List<Db2HostVariable> = hostVariableList
     return queryExposed.map { result ->
       result.copy(
         columns = result.columns.mapIndexed { index, it ->
-          val named = it.element as? NamedElement ?: return@mapIndexed it
+          val named = it.element as? SqlColumnName ?: return@mapIndexed it
           val foundHostVariable = columnNames.getOrNull(index) ?: return@mapIndexed  it
           it.copy(element = RenamedColumn(named, foundHostVariable.hostVariableId!!.name))
         }
@@ -42,7 +42,7 @@ internal abstract class SetStmtMixin(
     }
   }
 
-  private class RenamedColumn(origin: NamedElement, private val newName: String): NamedElement by origin {
+  private class RenamedColumn(origin: SqlColumnName, private val newName: String): SqlColumnName by origin {
     override fun getName(): String = newName
     override fun setName(name: String): Nothing = error("Not supported")
   }

@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm")
-    app.cash.sqldelight
+    app.softwork.sqldelight
 }
 
 dependencies {

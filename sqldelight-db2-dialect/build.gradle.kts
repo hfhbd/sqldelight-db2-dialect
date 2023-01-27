@@ -14,11 +14,7 @@ grammarKit {
 }
 
 dependencies {
-    api("app.softwork.sql.psi:core:0.5.0-db2-SNAPSHOT")
-    implementation("app.cash.sqldelight:dialect-api:2.0.0-alpha05") {
-        exclude("com.alecstrong.sql.psi")
-    }
-
+    api("app.softwork.sqldelight:dialect-api:2.0.0-SNAPSHOT")
     compileOnly("com.jetbrains.intellij.platform:ide-impl:$idea")
 
     testImplementation(kotlin("test"))
