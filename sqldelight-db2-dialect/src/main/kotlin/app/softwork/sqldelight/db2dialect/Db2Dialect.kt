@@ -28,7 +28,7 @@ public class Db2Dialect : SqlDelightDialect {
     /**
      * Specify predefined system tables in SQL
      */
-    public val predefinedSystemTables: List<PredefinedTable> get() = listOf(
+    override val predefinedSystemTables: List<PredefinedTable> get() = listOf(
         PredefinedTable(
             packageName = "db2.predefined",
             simpleFileName = "sq",
