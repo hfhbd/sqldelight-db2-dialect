@@ -18,7 +18,7 @@ dependencies {
     compileOnly("com.jetbrains.intellij.platform:ide-impl:$idea")
 
     testImplementation(kotlin("test"))
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0")
     testImplementation("com.jetbrains.intellij.platform:ide-impl:$idea") {
         exclude(group = "org.jetbrains.kotlinx", module = "kotlinx-coroutines-core")
     }
