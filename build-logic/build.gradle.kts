@@ -8,7 +8,7 @@ dependencies {
     implementation("io.github.gradle-nexus:publish-plugin:1.1.0")
     implementation("org.jetbrains.kotlinx:binary-compatibility-validator:0.13.1")
     implementation("app.softwork.sqldelight:gradle-plugin:2.0.0-SNAPSHOT")
-    implementation("app.cash.licensee:licensee-gradle-plugin:1.6.0")
+    implementation("app.cash.licensee:licensee-gradle-plugin:1.7.0")
 }
 
 gradlePlugin {
