@@ -11,6 +11,7 @@ public class Db2Dialect : SqlDelightDialect {
     override val icon: Icon = AllIcons.Providers.DB2
     override fun setup() {
         SqlParserUtil.reset()
+
         Db2ParserUtil.reset()
         Db2ParserUtil.overrideSqlParser()
     }
@@ -27,7 +28,7 @@ public class Db2Dialect : SqlDelightDialect {
 
     /**
      * Specify predefined system tables in SQL
-     */
+     
     override val predefinedSystemTables: List<PredefinedTable> get() = listOf(
         PredefinedTable(
             packageName = "db2.predefined",
@@ -39,4 +40,5 @@ public class Db2Dialect : SqlDelightDialect {
             """.trimIndent()
         )
     )
+    */
 }

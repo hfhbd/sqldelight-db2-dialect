@@ -1,28 +1,26 @@
 plugins {
     kotlin("jvm")
-    com.alecstrong.grammar.kit.composer
-    org.jetbrains.kotlinx.`binary-compatibility-validator`
-    app.cash.licensee
-    publish
-    exclude
+    id("com.alecstrong.grammar.kit.composer")
+    id("org.jetbrains.kotlinx.binary-compatibility-validator")
+    id("app.cash.licensee")
+    id("publish")
+    id("exclude")
+    id("repos")
 }
 
-val idea = "221.6008.13" // EE
-
 grammarKit {
-    intellijRelease.set(idea)
+    intellijRelease.set(libs.versions.idea)
 }
 
 dependencies {
-    api("app.softwork.sqldelight:dialect-api:2.0.0-SNAPSHOT")
-    compileOnly("com.jetbrains.intellij.platform:ide-impl:$idea")
+    api(libs.sqldelight.dialect)
+    compileOnly(libs.sqldelight.compilerEnv)
 
     testImplementation(kotlin("test"))
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
-    testImplementation("com.jetbrains.intellij.platform:ide-impl:$idea") {
-        exclude(group = "org.jetbrains.kotlinx", module = "kotlinx-coroutines-core")
+    testImplementation(libs.sqldelight.compilerEnv)
+    testImplementation(libs.sql.test.fixtures) {
+        exclude(group = "com.jetbrains.intellij.platform")
     }
-    testImplementation("app.softwork.sql.psi:test-fixtures:0.5.0-SNAPSHOT")
 }
 
 kotlin {

@@ -16,6 +16,7 @@
 
 package app.cash.sqldelight.dialect.api
 
+import app.softwork.sqldelight.db2dialect.mixins.parentOfType
 import com.alecstrong.sql.psi.core.psi.NamedElement
 import com.alecstrong.sql.psi.core.psi.QueryElement.QueryColumn
 import com.alecstrong.sql.psi.core.psi.Queryable
@@ -24,7 +25,6 @@ import com.alecstrong.sql.psi.core.psi.SqlCompoundSelectStmt
 import com.alecstrong.sql.psi.core.psi.SqlCreateViewStmt
 import com.alecstrong.sql.psi.core.psi.SqlCteTableName
 import com.alecstrong.sql.psi.core.psi.SqlViewName
-import com.intellij.psi.util.parentOfType
 import com.intellij.psi.util.PsiTreeUtil
 
 internal class SelectQueryable(
