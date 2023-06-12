@@ -11,7 +11,7 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiNamedElement
 import com.intellij.psi.util.PsiTreeUtil
 
-private inline fun <reified T : PsiElement> PsiElement.parentOfType(withSelf: Boolean = false): T? {
+internal inline fun <reified T : PsiElement> PsiElement.parentOfType(withSelf: Boolean = false): T? {
   return PsiTreeUtil.getParentOfType(this, T::class.java, !withSelf)
 }
 
