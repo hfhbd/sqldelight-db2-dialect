@@ -1,9 +1,11 @@
 package app.softwork.sqldelight.db2dialect
 
 import app.cash.sqldelight.dialect.api.*
-import app.softwork.sqldelight.db2dialect.grammar.psi.*
-import app.softwork.sqldelight.db2dialect.mixins.*
+import app.softwork.sqldelight.db2dialect.grammar.psi.Db2ExtensionStmt
+import app.softwork.sqldelight.db2dialect.grammar.psi.Db2SelectStmt
+import app.softwork.sqldelight.db2dialect.grammar.psi.Db2TypeName
 import com.alecstrong.sql.psi.core.psi.*
+import com.intellij.psi.PsiElement
 
 internal class Db2TypeResolver(private val parentResolver: TypeResolver) : TypeResolver by parentResolver {
     override fun definitionType(typeName: SqlTypeName): IntermediateType {
@@ -46,12 +48,41 @@ internal class Db2TypeResolver(private val parentResolver: TypeResolver) : TypeR
         val ext = sqlStmt.extensionStmt
         if (ext != null) {
             val set = (ext as Db2ExtensionStmt).setStmt
-            set.compoundSelectStmtInternal?.let { SelectQueryable(it) }
-            return SetQueryWithResults(set)
+            val select = set.child<SqlCompoundSelectStmt>()
+            return if (select != null) {
+                SelectQueryable(select)
+            } else {
+                SetQueryWithResults(set)
+            }
         }
         val compoundSelectStmt = sqlStmt.compoundSelectStmt
-        return if (compoundSelectStmt is Db2CompoundSelectMixin) {
-            compoundSelectStmt.queryWithResults()
+        return if (compoundSelectStmt != null) {
+            for (stmt in compoundSelectStmt.selectStmtList) {
+                stmt as Db2SelectStmt
+                if (stmt.selectIntoClause != null) {
+                    return CreateNewTableClass(compoundSelectStmt)
+                }
+            }
+            return SelectQueryable(compoundSelectStmt)
         } else parentResolver.queryWithResults(sqlStmt)
     }
+}
+
+private inline fun <reified T : PsiElement> PsiElement.child(): T? {
+    var current = this@child
+    while (true) {
+        val firstChild = current.firstChild ?: break
+        if (firstChild is T) {
+            return firstChild
+        }
+        current = firstChild
+    }
+    return null
+}
+
+private class CreateNewTableClass(
+    override val select: SqlCompoundSelectStmt,
+) : QueryWithResults {
+    override var statement: SqlAnnotatedElement = select
+    override val pureTable: NamedElement? = null
 }
