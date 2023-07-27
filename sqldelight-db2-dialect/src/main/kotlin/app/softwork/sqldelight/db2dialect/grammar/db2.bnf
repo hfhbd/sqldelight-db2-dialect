@@ -60,11 +60,6 @@ select_into_clause ::= INTO host_variable ( COMMA host_variable ) * {
   pin = 1
 }
 
-compound_select_stmt_internal ::= {compound_select_stmt} {
-  mixin = "app.softwork.sqldelight.db2dialect.mixins.Db2CompoundSelectMixin"
-  implements = "com.alecstrong.sql.psi.core.psi.SqlCompoundSelectStmt"
-}
-
 select_stmt ::= SELECT [ DISTINCT | ALL ] {result_column} ( COMMA {result_column} ) * [select_into_clause] FROM {join_clause} [ WHERE <<expr '-1'>> ] [ GROUP BY <<expr '-1'>> ( COMMA <<expr '-1'>> ) * [ HAVING <<expr '-1'>> ] ] | VALUES {values_expression} ( COMMA {values_expression} ) * {
   mixin = "app.softwork.sqldelight.db2dialect.mixins.Db2SelectStmtMixin"
   implements = [
@@ -74,7 +69,7 @@ select_stmt ::= SELECT [ DISTINCT | ALL ] {result_column} ( COMMA {result_column
   override = true
 }
 
-set_stmt ::= SET host_variable ( COMMA host_variable ) * EQ ( set_setter_clause | compound_select_stmt_internal ) {
+set_stmt ::= SET host_variable ( COMMA host_variable ) * EQ ( set_setter_clause | {compound_select_stmt} ) {
   pin = 1
   mixin = "app.softwork.sqldelight.db2dialect.mixins.SetStmtMixin"
   implements = [
@@ -85,7 +80,7 @@ set_stmt ::= SET host_variable ( COMMA host_variable ) * EQ ( set_setter_clause 
 
 set_setter_clause ::= <<expr '-1'>> ( COMMA <<expr '-1'>> ) *
 
-host_variable ::= host_variable_binding host_variable_id {
+host_variable ::= ':' host_variable_id {
  pin = 1
 }
 
@@ -96,8 +91,6 @@ host_variable_id ::= id {
     "com.alecstrong.sql.psi.core.psi.SqlCompositeElement"
   ]
 }
-
-host_variable_binding ::= ':'
 
 type_name ::= (
   tiny_int_data_type |
