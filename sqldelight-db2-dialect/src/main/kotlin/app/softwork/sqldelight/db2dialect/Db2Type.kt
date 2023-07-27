@@ -39,7 +39,7 @@ internal enum class Db2Type(override val javaType: TypeName) : DialectType {
     TIMESTAMP_TIMEZONE(ClassName("kotlinx.datetime", "Instant")),
     ;
 
-    override fun prepareStatementBinder(columnIndex: String, value: CodeBlock): CodeBlock {
+    override fun prepareStatementBinder(columnIndex: CodeBlock, value: CodeBlock): CodeBlock {
         return CodeBlock.builder()
             .add(
                 when (this) {
@@ -47,7 +47,7 @@ internal enum class Db2Type(override val javaType: TypeName) : DialectType {
                     DATE, TIME, TIMESTAMP, TIMESTAMP_TIMEZONE -> "bindObject"
                 }
             )
-            .add("($columnIndex, %L)\n", value)
+            .add("(%L, %L)\n", columnIndex, value)
             .build()
     }
 
