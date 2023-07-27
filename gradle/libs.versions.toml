@@ -5,9 +5,13 @@ idea = "222.4459.24" # Flamingo | 2022.2.1
 [libraries]
 sqldelight-dialect = { module = "app.cash.sqldelight:dialect-api", version.ref = "sqldelight" }
 sqldelight-compilerEnv = { module = "app.cash.sqldelight:compiler-env", version.ref = "sqldelight" }
+sqldelight-jdbcDriver = { module = "app.cash.sqldelight:jdbc-driver", version.ref = "sqldelight" }
 
 sql-test-fixtures = { module = "com.alecstrong.sql.psi:test-fixtures", version = "0.4.6" }
 datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.4.0" }
+testcontainers = { module = "org.testcontainers:db2", version = "1.17.6" }
+db2-driver = { module = "com.ibm.db2:jcc", version = "11.5.8.0" }
+logback = { module = "ch.qos.logback:logback-classic", version = "1.4.5" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version = "1.9.0" }
