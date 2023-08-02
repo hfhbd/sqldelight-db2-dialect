@@ -15,6 +15,9 @@ jobs:
     environment:
       name: CD
 
+    env:
+      GRADLE_OPTS: -Dorg.gradle.caching=true
+
     steps:
       - name: Set environment for version
         run: long="${{ github.ref }}"; version=${long#"refs/tags/v"}; echo "version=${version}" >> $GITHUB_ENV
