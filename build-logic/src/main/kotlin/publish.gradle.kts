@@ -12,6 +12,9 @@ java {
 }
 
 publishing {
+    publications.register<MavenPublication>("maven") {
+        from(components["java"])
+    }
     publications.withType<MavenPublication>().configureEach {
         pom {
             name.set("app.softwork DB2 JDBC Driver and SqlDelight Dialect")
