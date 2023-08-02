@@ -41,17 +41,11 @@
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.WITHOUT"
   ]
 }
-overrides ::= type_name | generated_clause | bind_parameter | select_stmt | bind_expr | extension_stmt
+overrides ::= type_name | generated_clause | bind_parameter | select_stmt | extension_stmt
 
 extension_stmt ::= set_stmt {
   extends = "com.alecstrong.sql.psi.core.psi.impl.SqlExtensionStmtImpl"
   implements = "com.alecstrong.sql.psi.core.psi.SqlExtensionStmt"
-  override = true
-}
-
-bind_expr ::= bind_parameter | host_variable {
-  extends = "com.alecstrong.sql.psi.core.psi.impl.SqlBindExprImpl"
-  implements = "com.alecstrong.sql.psi.core.psi.SqlBindExpr"
   override = true
 }
 
@@ -60,7 +54,7 @@ select_into_clause ::= INTO host_variable ( COMMA host_variable ) * {
   pin = 1
 }
 
-select_stmt ::= SELECT [ DISTINCT | ALL ] {result_column} ( COMMA {result_column} ) * [select_into_clause] FROM {join_clause} [ WHERE <<expr '-1'>> ] [ GROUP BY <<expr '-1'>> ( COMMA <<expr '-1'>> ) * [ HAVING <<expr '-1'>> ] ] | VALUES {values_expression} ( COMMA {values_expression} ) * {
+select_stmt ::= SELECT [ DISTINCT | ALL ] {result_column} ( COMMA {result_column} ) * [select_into_clause] FROM {join_clause} [ WHERE <<expr '-1'>> ] [{group_by}] [ HAVING <<expr '-1'>> ] | VALUES {values_expression} ( COMMA {values_expression} ) * {
   mixin = "app.softwork.sqldelight.db2dialect.mixins.Db2SelectStmtMixin"
   implements = [
     "com.alecstrong.sql.psi.core.psi.SqlSelectStmt"
@@ -151,7 +145,7 @@ char_length_units ::= 'CHARACTERS' | 'OCTETS'
 binary_string_data_type ::= { ('BINARY' 'VARYING') | 'VARBINARY' } LP digit RP | binary_large_object_string_data_type | { 'BINARY' | 'LONGVARBINARY' } [ LP digit RP ] | 'UUID'
 binary_large_object_string_data_type ::= { ('BINARY' 'LARGE' 'OBJECT') | 'BLOB' } [ LP digit RP ]
 
-bit_string_data_type ::= ('BIT' 'VARYING') LP digit RP | 'BIT' [ LP digit RP ]
+bit_string_data_type ::= 'BIT' 'VARYING' LP digit RP | 'BIT' [ LP digit RP ]
 
 date_data_type ::= 'DATE' | ( 'TIME' | 'TIMESTAMP' ) [ LP digit RP ] [ ( WITH | WITHOUT ) 'TIME' 'ZONE' ]
 
@@ -162,7 +156,8 @@ end_field ::= non_second_primary_datetime_field | 'SECOND' [ LP digit RP ]
 single_datetime_field ::= non_second_primary_datetime_field [ LP digit RP ] | 'SECOND' [ LP digit [ COMMA digit ] RP ]
 non_second_primary_datetime_field ::= 'YEAR' | 'MONTH' | 'DAY' | 'HOUR' | 'MINUTE'
 
-bind_parameter ::= '?' | ':' {identifier} {
+bind_parameter ::= '?' | host_variable {
+  mixin = "app.cash.sqldelight.dialect.grammar.mixins.BindParameterMixin"
   extends = "com.alecstrong.sql.psi.core.psi.impl.SqlBindParameterImpl"
   implements = "com.alecstrong.sql.psi.core.psi.SqlBindParameter"
   override = true

@@ -1,15 +1,15 @@
 plugins {
     kotlin("jvm")
-    app.softwork.sqldelight
+    id("app.cash.sqldelight")
 }
 
 dependencies {
-    implementation("app.cash.sqldelight:jdbc-driver:2.0.0-alpha05")
+    implementation(libs.sqldelight.jdbcDriver)
+    implementation(libs.db2.driver)
 
     testImplementation(kotlin("test"))
-    testImplementation("org.testcontainers:db2:1.17.6")
-    testImplementation("com.ibm.db2:jcc:11.5.8.0")
-    testRuntimeOnly("ch.qos.logback:logback-classic:1.4.5")
+    testImplementation(libs.testcontainers)
+    testRuntimeOnly(libs.logback)
 }
 
 sqldelight {
