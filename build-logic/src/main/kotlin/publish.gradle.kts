@@ -1,21 +1,18 @@
 import java.util.*
 
 plugins {
+    id("java")
     id("maven-publish")
     id("signing")
 }
 
-val emptyJar by tasks.registering(Jar::class)
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
 
 publishing {
-    publications.register<MavenPublication>("mavenJava") {
-        from(components["java"])
-    }
-    publications.configureEach {
-        this as MavenPublication
-        artifact(emptyJar) {
-            classifier = "javadoc"
-        }
+    publications.withType<MavenPublication>().configureEach {
         pom {
             name.set("app.softwork DB2 JDBC Driver and SqlDelight Dialect")
             description.set("A DB2 JDBC driver including support for SqlDelight")
