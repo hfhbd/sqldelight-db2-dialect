@@ -3,6 +3,8 @@ plugins {
     id("app.cash.sqldelight")
 }
 
+kotlin.jvmToolchain(8)
+
 dependencies {
     implementation(libs.sqldelight.jdbcDriver)
     implementation(libs.db2.driver)
