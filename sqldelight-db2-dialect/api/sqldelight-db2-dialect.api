@@ -1,4 +1,5 @@
 public final class app/softwork/sqldelight/db2dialect/Db2Dialect : app/cash/sqldelight/dialect/api/SqlDelightDialect {
+	public static final field Companion Lapp/softwork/sqldelight/db2dialect/Db2Dialect$Companion;
 	public fun <init> ()V
 	public fun getAllowsReferenceCycles ()Z
 	public fun getAsyncRuntimeTypes ()Lapp/cash/sqldelight/dialect/api/RuntimeTypes;
@@ -11,6 +12,10 @@ public final class app/softwork/sqldelight/db2dialect/Db2Dialect : app/cash/sqld
 	public fun migrationSquasher (Lapp/cash/sqldelight/dialect/api/MigrationSquasher;)Lapp/cash/sqldelight/dialect/api/MigrationSquasher;
 	public fun setup ()V
 	public fun typeResolver (Lapp/cash/sqldelight/dialect/api/TypeResolver;)Lapp/cash/sqldelight/dialect/api/TypeResolver;
+}
+
+public final class app/softwork/sqldelight/db2dialect/Db2Dialect$Companion {
+	public final fun getPredefinedSystemSchema ()Ljava/util/List;
 }
 
 public final class app/softwork/sqldelight/db2dialect/SetQueryWithResults : app/cash/sqldelight/dialect/api/QueryWithResults {
