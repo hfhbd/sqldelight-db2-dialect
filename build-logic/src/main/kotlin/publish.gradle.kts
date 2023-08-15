@@ -45,8 +45,10 @@ publishing {
 signing {
     val signingKey: String? by project
     val signingPassword: String? by project
-    useInMemoryPgpKeys(signingKey?.let { String(Base64.getDecoder().decode(it)).trim() }, signingPassword)
-    sign(publishing.publications)
+    signingKey?.let {
+        useInMemoryPgpKeys(String(Base64.getDecoder().decode(it)).trim(), signingPassword)
+        sign(publishing.publications)
+    }
 }
 
 // https://youtrack.jetbrains.com/issue/KT-46466
