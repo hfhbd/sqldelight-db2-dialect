@@ -29,11 +29,18 @@ public class Db2Dialect : SqlDelightDialect {
     /*
      * Specify predefined system tables in SQL
      */
-    public val predefinedSystemSchema: List<String> = listOf(
-        """
-        CREATE TABLE SYSIBM.SYSDUMMY1 (
-         IBMREQD CHAR(1) NOT NULL
-        );
-        """.trimIndent()
-    )
+    public val predefinedSystemSchema: List<String> = Db2Dialect.predefinedSystemSchema
+
+    public companion object {
+        /*
+        * Specify predefined system tables in SQL
+        */
+        public val predefinedSystemSchema: List<String> = listOf(
+            """
+            CREATE TABLE SYSIBM.SYSDUMMY1 (
+              IBMREQD CHAR(1) NOT NULL
+            );
+            """.trimIndent()
+        )
+    }
 }
