@@ -1,13 +1,13 @@
 [versions]
 sqldelight = "2.0.0"
-idea = "222.4459.24" # Flamingo | 2022.2.1
+idea = "223.8836.41" # AS Giraffe | IC-2022.3.3
 
 [libraries]
 sqldelight-dialect = { module = "app.cash.sqldelight:dialect-api", version.ref = "sqldelight" }
 sqldelight-compilerEnv = { module = "app.cash.sqldelight:compiler-env", version.ref = "sqldelight" }
 sqldelight-jdbcDriver = { module = "app.cash.sqldelight:jdbc-driver", version.ref = "sqldelight" }
 
-sql-test-fixtures = { module = "com.alecstrong.sql.psi:test-fixtures", version = "0.4.6" }
+sql-psi = { module = "com.alecstrong.sql.psi:core", version = "0.5.0-SNAPSHOT" }
 datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.4.1" }
 testcontainers = { module = "org.testcontainers:db2", version = "1.19.0" }
 db2-driver = { module = "com.ibm.db2:jcc", version = "11.5.8.0" }

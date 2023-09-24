@@ -6,6 +6,7 @@ plugins {
     id("publish")
     id("exclude")
     id("repos")
+    id("java-test-fixtures")
 }
 
 grammarKit {
@@ -18,9 +19,7 @@ dependencies {
 
     testImplementation(kotlin("test"))
     testImplementation(libs.sqldelight.compilerEnv)
-    testImplementation(libs.sql.test.fixtures) {
-        exclude(group = "com.jetbrains.intellij.platform")
-    }
+    testImplementation(testFixtures(libs.sql.psi))
 }
 
 kotlin {
@@ -28,12 +27,9 @@ kotlin {
 
     explicitApi()
 
-    target.compilations.configureEach {
-        kotlinOptions.allWarningsAsErrors = true
-    }
-
-    sourceSets.configureEach {
-        languageSettings.progressiveMode = true
+    compilerOptions {
+        allWarningsAsErrors.set(true)
+        progressiveMode.set(true)
     }
 }
 
