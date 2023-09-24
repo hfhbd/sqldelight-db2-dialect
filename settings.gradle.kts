@@ -26,6 +26,7 @@ gradleEnterprise {
 rootProject.name = "sqldelight-db2"
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 
 include(":sqldelight-db2-dialect")
 include(":testing")
