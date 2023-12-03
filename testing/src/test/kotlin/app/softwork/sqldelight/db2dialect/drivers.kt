@@ -11,6 +11,7 @@ import kotlinx.coroutines.test.TestResult
 import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.runTest
 import org.testcontainers.containers.*
+import kotlin.time.Duration.Companion.minutes
 
 private val container = Db2Container("ibmcom/db2:11.5.7.0").acceptLicense()
 
@@ -36,7 +37,7 @@ fun testR2dbcDriver(action: suspend TestScope.(R2dbcDriver) -> Unit): TestResult
         .password("foobar1234")
         .build()
 
-    return runTest {
+    return runTest(timeout = 1.minutes) {
         val driver = R2dbcDriver(DB2ConnectionFactory(config).create().awaitFirst())
         driver.use {
             action(it)
