@@ -7,10 +7,10 @@ getAll:
 SELECT * FROM foo;
 
 new:
-INSERT INTO foo VALUES ?;
+INSERT INTO foo VALUES (:id, :name);
 
 create:
-INSERT INTO foo (id, name) VALUES ?;
+INSERT INTO foo (id, name) VALUES (:id, :name);
 
 embedded:
 SELECT * INTO :foo, :a FROM foo;

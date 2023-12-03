@@ -31,3 +31,7 @@ sqldelight {
         srcDirs.setFrom("src/main/sqldelight-async")
     }
 }
+
+tasks.test {
+    maxParallelForks = 4
+}

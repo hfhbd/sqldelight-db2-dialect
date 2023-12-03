@@ -11,11 +11,9 @@ import kotlinx.coroutines.test.TestResult
 import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.runTest
 import org.testcontainers.containers.*
-import kotlin.time.Duration.Companion.minutes
-
-private val container = Db2Container("ibmcom/db2:11.5.7.0").acceptLicense()
 
 fun jdbcDriver(): JdbcDriver {
+    val container = Db2Container("icr.io/db2_community/db2").acceptLicense()
     container.start()
     return DB2SimpleDataSource().apply {
         databaseName = "test"
@@ -28,6 +26,7 @@ fun jdbcDriver(): JdbcDriver {
 }
 
 fun testR2dbcDriver(action: suspend TestScope.(R2dbcDriver) -> Unit): TestResult {
+    val container = Db2Container("icr.io/db2_community/db2").acceptLicense()
     container.start()
     val config: DB2ConnectionConfiguration = DB2ConnectionConfiguration.builder()
         .database("test")
@@ -38,7 +37,7 @@ fun testR2dbcDriver(action: suspend TestScope.(R2dbcDriver) -> Unit): TestResult
         .build()
 
     return runTest {
-        val driver = backgroundScope.R2dbcDriver(DB2ConnectionFactory(config).create().awaitFirst())
+        val driver = R2dbcDriver(DB2ConnectionFactory(config).create().awaitFirst())
         driver.use {
             action(it)
         }
