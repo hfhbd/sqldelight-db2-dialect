@@ -1,13 +1,13 @@
-package app.softwork.sqldelight.db2dialect
+package app.softwork.sqldelight.db2dialect.async
 
+import app.softwork.sqldelight.db2dialect.testR2dbcDriver
 import kotlin.test.*
 
-class Testing {
+class AsyncTesting {
     @Test
-    fun select() {
-        val driver = jdbcDriver()
-        TestingDB.Schema.create(driver)
-        val db = TestingDB(driver)
+    fun select() = testR2dbcDriver { driver ->
+        TestingDBAsync.Schema.create(driver)
+        val db = TestingDBAsync(driver)
 
         assertEquals(emptyList(), db.fooQueries.getAll().executeAsList())
         db.fooQueries.new(Foo(42, "Foo"))
