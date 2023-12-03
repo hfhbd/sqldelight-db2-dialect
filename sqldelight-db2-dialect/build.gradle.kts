@@ -26,12 +26,9 @@ kotlin {
 
     explicitApi()
 
-    target.compilations.configureEach {
-        kotlinOptions.allWarningsAsErrors = true
-    }
-
-    sourceSets.configureEach {
-        languageSettings.progressiveMode = true
+    compilerOptions {
+        allWarningsAsErrors.set(true)
+        progressiveMode.set(true)
     }
 }
 

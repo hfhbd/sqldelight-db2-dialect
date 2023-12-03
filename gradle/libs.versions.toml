@@ -1,6 +1,6 @@
 [versions]
 sqldelight = "2.0.1"
-idea = "222.4459.24" # Flamingo | 2022.2.1
+idea = "223.8836.41" # AS Giraffe | IC-2022.3.3
 
 [libraries]
 sqldelight-dialect = { module = "app.cash.sqldelight:dialect-api", version.ref = "sqldelight" }
