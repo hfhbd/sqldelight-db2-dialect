@@ -18,9 +18,7 @@ dependencies {
 
     testImplementation(kotlin("test"))
     testImplementation(libs.sqldelight.compilerEnv)
-    testImplementation(libs.sql.test.fixtures) {
-        exclude(group = "com.jetbrains.intellij.platform")
-    }
+    testImplementation(testFixtures(libs.sql.psi))
 }
 
 kotlin {
