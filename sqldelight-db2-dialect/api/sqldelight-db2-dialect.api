@@ -488,7 +488,7 @@ public class app/softwork/sqldelight/db2dialect/grammar/psi/impl/Db2BinaryString
 	public fun getBinaryLargeObjectStringDataType ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2BinaryLargeObjectStringDataType;
 }
 
-public class app/softwork/sqldelight/db2dialect/grammar/psi/impl/Db2BindParameterImpl : app/cash/sqldelight/dialect/grammar/mixins/BindParameterMixin, app/softwork/sqldelight/db2dialect/grammar/psi/Db2BindParameter {
+public class app/softwork/sqldelight/db2dialect/grammar/psi/impl/Db2BindParameterImpl : app/softwork/sqldelight/db2dialect/mixins/Db2BindParameterMixin, app/softwork/sqldelight/db2dialect/grammar/psi/Db2BindParameter {
 	public fun <init> (Lcom/intellij/lang/ASTNode;)V
 	public fun accept (Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2Visitor;)V
 	public fun accept (Lcom/intellij/psi/PsiElementVisitor;)V
@@ -710,5 +710,10 @@ public class app/softwork/sqldelight/db2dialect/grammar/psi/impl/Db2TypeNameImpl
 	public fun getIntervalDataType ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2IntervalDataType;
 	public fun getSmallIntDataType ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2SmallIntDataType;
 	public fun getTinyIntDataType ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2TinyIntDataType;
+}
+
+public abstract class app/softwork/sqldelight/db2dialect/mixins/Db2BindParameterMixin : app/cash/sqldelight/dialect/grammar/mixins/BindParameterMixin {
+	public fun <init> (Lcom/intellij/lang/ASTNode;)V
+	public fun replaceWith (ZI)Ljava/lang/String;
 }
 
