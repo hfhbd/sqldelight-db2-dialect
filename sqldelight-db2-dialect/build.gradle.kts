@@ -6,7 +6,6 @@ plugins {
     id("publish")
     id("exclude")
     id("repos")
-    id("java-test-fixtures")
 }
 
 grammarKit {
