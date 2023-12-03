@@ -37,8 +37,8 @@ fun testR2dbcDriver(action: suspend TestScope.(R2dbcDriver) -> Unit): TestResult
         .password("foobar1234")
         .build()
 
-    return runTest(timeout = 1.minutes) {
-        val driver = R2dbcDriver(DB2ConnectionFactory(config).create().awaitFirst())
+    return runTest {
+        val driver = backgroundScope.R2dbcDriver(DB2ConnectionFactory(config).create().awaitFirst())
         driver.use {
             action(it)
         }
