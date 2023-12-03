@@ -23,8 +23,10 @@ public class Db2Dialect : SqlDelightDialect {
         ClassName("app.cash.sqldelight.driver.jdbc", "JdbcPreparedStatement")
     )
 
-    override val asyncRuntimeTypes: RuntimeTypes
-        get() = throw UnsupportedOperationException("DB2 does not support an async driver")
+    override val asyncRuntimeTypes: RuntimeTypes = RuntimeTypes(
+        ClassName("app.cash.sqldelight.driver.r2dbc", "R2dbcCursor"),
+        ClassName("app.cash.sqldelight.driver.r2dbc", "R2dbcPreparedStatement")
+    )
 
     /*
      * Specify predefined system tables in SQL

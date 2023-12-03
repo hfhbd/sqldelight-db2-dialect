@@ -1,11 +1,11 @@
 package app.softwork.sqldelight.db2dialect
 
-import app.softwork.sqldelight.db2dialect.DB2.driver
 import kotlin.test.*
 
 class Testing {
     @Test
     fun select() {
+        val driver = jdbcDriver()
         TestingDB.Schema.create(driver)
         val db = TestingDB(driver)
 

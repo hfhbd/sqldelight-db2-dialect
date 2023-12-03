@@ -157,7 +157,7 @@ single_datetime_field ::= non_second_primary_datetime_field [ LP digit RP ] | 'S
 non_second_primary_datetime_field ::= 'YEAR' | 'MONTH' | 'DAY' | 'HOUR' | 'MINUTE'
 
 bind_parameter ::= '?' | host_variable {
-  mixin = "app.cash.sqldelight.dialect.grammar.mixins.BindParameterMixin"
+  mixin = "app.softwork.sqldelight.db2dialect.mixins.Db2BindParameterMixin"
   extends = "com.alecstrong.sql.psi.core.psi.impl.SqlBindParameterImpl"
   implements = "com.alecstrong.sql.psi.core.psi.SqlBindParameter"
   override = true
