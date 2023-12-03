@@ -9,7 +9,7 @@ pluginManagement {
 plugins {
     id("MyRepos")
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
-    id("com.gradle.enterprise") version "3.15"
+    id("com.gradle.enterprise") version "3.15.1"
 }
 
 gradleEnterprise {
@@ -26,6 +26,7 @@ gradleEnterprise {
 rootProject.name = "sqldelight-db2"
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 
 include(":sqldelight-db2-dialect")
 include(":testing")

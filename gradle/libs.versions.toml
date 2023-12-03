@@ -1,5 +1,5 @@
 [versions]
-sqldelight = "2.0.0"
+sqldelight = "2.0.1"
 idea = "223.8836.41" # AS Giraffe | IC-2022.3.3
 
 [libraries]
@@ -9,14 +9,14 @@ sqldelight-jdbcDriver = { module = "app.cash.sqldelight:jdbc-driver", version.re
 
 sql-psi = { module = "com.alecstrong.sql.psi:core", version = "0.4.8" }
 datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.4.1" }
-testcontainers = { module = "org.testcontainers:db2", version = "1.19.0" }
-db2-driver = { module = "com.ibm.db2:jcc", version = "11.5.8.0" }
+testcontainers = { module = "org.testcontainers:db2", version = "1.19.3" }
+db2-driver = { module = "com.ibm.db2:jcc", version = "11.5.9.0" }
 logback = { module = "ch.qos.logback:logback-classic", version = "1.3.11" }
 
 [plugins]
-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version = "1.9.10" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version = "1.9.21" }
 sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
-licensee = { id = "app.cash.licensee", version = "1.7.0" }
+licensee = { id = "app.cash.licensee", version = "1.8.0" }
 publish = { id = "io.github.gradle-nexus.publish-plugin", version = "1.3.0" }
 grammarKit = { id = "com.alecstrong.grammar.kit.composer", version = "0.1.12" }
 binary = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version = "0.13.2" }
