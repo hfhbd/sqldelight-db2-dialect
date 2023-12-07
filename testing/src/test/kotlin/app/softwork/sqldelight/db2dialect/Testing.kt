@@ -24,7 +24,7 @@ class Testing {
         with(getAll[1]) {
             assertEquals(100, id)
             assertEquals(42, id2)
-            assertTrue(LocalDateTime.of(2023, 1, 1, 1, 1) > time)
+            assertTrue(time > LocalDateTime.of(2023, 1, 1, 1, 1))
             assertEquals("Bar", name)
         }
     }
