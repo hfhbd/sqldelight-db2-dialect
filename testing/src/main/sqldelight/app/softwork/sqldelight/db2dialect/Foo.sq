@@ -5,8 +5,11 @@ CREATE TABLE foo(
   name VARCHAR(255) NOT NULL
 );
 
-getAll:
+getCurrentDate:
 SELECT CURRENT DATE, * FROM foo;
+
+getAll:
+SELECT * FROM foo;
 
 new:
 INSERT INTO foo VALUES ?;
