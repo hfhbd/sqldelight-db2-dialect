@@ -13,6 +13,8 @@
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.AS"
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.BY"
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.COMMA"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.CURRENT_DATE"
+    "static com.alecstrong.sql.psi.core.psi.SqlTypes.CURRENT_TIMESTAMP"
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.DEFAULT"
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.DIGIT"
     "static com.alecstrong.sql.psi.core.psi.SqlTypes.DISTINCT"
@@ -166,8 +168,8 @@ bind_parameter ::= '?' | host_variable {
 literal_value ::= ( {numeric_literal}
                   | {string_literal}
                   | NULL
-                  | 'CURRENT' 'DATE'
-                  | 'CURRENT' 'TIMESTAMP'
+                  | 'CURRENT' 'DATE' | CURRENT_DATE
+                  | 'CURRENT' 'TIMESTAMP' | CURRENT_TIMESTAMP
                   ) {
   mixin = "app.softwork.sqldelight.db2dialect.mixins.LiteralValueMixin"
   implements = "com.alecstrong.sql.psi.core.psi.SqlLiteralValue"

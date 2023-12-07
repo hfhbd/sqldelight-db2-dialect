@@ -6,7 +6,7 @@ CREATE TABLE foo(
 );
 
 getCurrentDate:
-SELECT CURRENT DATE, * FROM foo;
+SELECT CURRENT DATE, CURRENT_DATE FROM foo;
 
 getAll:
 SELECT * FROM foo;
