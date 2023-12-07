@@ -10,13 +10,15 @@ class Testing {
         TestingDB.Schema.create(driver)
         val db = TestingDB(driver)
 
-        assertEquals(emptyList(), db.fooQueries.getAll().executeAsList())
-        db.fooQueries.new(Foo(42, -1, LocalDateTime.MIN, "Foo"))
-        assertEquals(listOf(Foo(42, -1, LocalDateTime.MIN, "Foo")), db.fooQueries.getAll().executeAsList())
+        val time = LocalDateTime.of(2023, 10, 10, 1, 1)
 
-        db.fooQueries.create(Foo(100, -1, LocalDateTime.MIN, "Bar"))
+        assertEquals(emptyList(), db.fooQueries.getAll().executeAsList())
+        db.fooQueries.new(Foo(42, -1, time, "Foo"))
+        assertEquals(listOf(Foo(42, -1, time, "Foo")), db.fooQueries.getAll().executeAsList())
+
+        db.fooQueries.create(Foo(100, -1, time, "Bar"))
         assertEquals(
-            listOf(Foo(42, -1, LocalDateTime.MIN, "Foo"), Foo(100, -1, LocalDateTime.MIN, "Bar")),
+            listOf(Foo(42, -1, time, "Foo"), Foo(100, -1, time, "Bar")),
             db.fooQueries.getAll().executeAsList()
         )
     }
