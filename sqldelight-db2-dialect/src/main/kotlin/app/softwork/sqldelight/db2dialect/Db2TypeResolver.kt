@@ -66,6 +66,15 @@ internal class Db2TypeResolver(private val parentResolver: TypeResolver) : TypeR
             return SelectQueryable(compoundSelectStmt)
         } else parentResolver.queryWithResults(sqlStmt)
     }
+
+    override fun resolvedType(expr: SqlExpr): IntermediateType = when(expr) {
+        is SqlLiteralExpr -> when (expr.literalValue.text) {
+            "CURRENT_DATE", "CURRENT DATE" -> IntermediateType(Db2Type.DATE)
+            "CURRENT_TIMESTAMP", "CURRENT TIMESTAMP" -> IntermediateType(Db2Type.TIMESTAMP)
+            else -> parentResolver.resolvedType(expr)
+        }
+        else -> parentResolver.resolvedType(expr)
+    }
 }
 
 private inline fun <reified T : PsiElement> PsiElement.child(): T? {

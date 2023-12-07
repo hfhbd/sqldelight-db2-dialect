@@ -51,6 +51,7 @@ public class app/softwork/sqldelight/db2dialect/grammar/Db2Parser : com/intellij
 	public static fun int_data_type_real (Lcom/intellij/lang/PsiBuilder;I)Z
 	public static fun interval_data_type_real (Lcom/intellij/lang/PsiBuilder;I)Z
 	public static fun interval_qualifier_real (Lcom/intellij/lang/PsiBuilder;I)Z
+	public static fun literal_value_real (Lcom/intellij/lang/PsiBuilder;I)Z
 	public static fun multiplier_real (Lcom/intellij/lang/PsiBuilder;I)Z
 	public static fun non_second_primary_datetime_field_real (Lcom/intellij/lang/PsiBuilder;I)Z
 	public static fun overrides_real (Lcom/intellij/lang/PsiBuilder;I)Z
@@ -112,6 +113,7 @@ public final class app/softwork/sqldelight/db2dialect/grammar/Db2ParserUtil : co
 	public final fun getInt_data_type ()Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;
 	public final fun getInterval_data_type ()Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;
 	public final fun getInterval_qualifier ()Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;
+	public final fun getLiteral_value ()Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;
 	public final fun getMultiplier ()Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;
 	public final fun getNon_second_primary_datetime_field ()Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;
 	public final fun getOverrides ()Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;
@@ -131,6 +133,7 @@ public final class app/softwork/sqldelight/db2dialect/grammar/Db2ParserUtil : co
 	public static final fun intDataTypeExt (Lcom/intellij/lang/PsiBuilder;ILcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)Z
 	public static final fun intervalDataTypeExt (Lcom/intellij/lang/PsiBuilder;ILcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)Z
 	public static final fun intervalQualifierExt (Lcom/intellij/lang/PsiBuilder;ILcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)Z
+	public static final fun literalValueExt (Lcom/intellij/lang/PsiBuilder;ILcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)Z
 	public static final fun multiplierExt (Lcom/intellij/lang/PsiBuilder;ILcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)Z
 	public static final fun nonSecondPrimaryDatetimeFieldExt (Lcom/intellij/lang/PsiBuilder;ILcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)Z
 	public final fun overrideSqlParser ()V
@@ -163,6 +166,7 @@ public final class app/softwork/sqldelight/db2dialect/grammar/Db2ParserUtil : co
 	public final fun setInt_data_type (Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)V
 	public final fun setInterval_data_type (Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)V
 	public final fun setInterval_qualifier (Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)V
+	public final fun setLiteral_value (Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)V
 	public final fun setMultiplier (Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)V
 	public final fun setNon_second_primary_datetime_field (Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)V
 	public final fun setOverrides (Lcom/intellij/lang/parser/GeneratedParserUtilBase$Parser;)V
@@ -269,6 +273,9 @@ public abstract interface class app/softwork/sqldelight/db2dialect/grammar/psi/D
 	public abstract fun getStartField ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2StartField;
 }
 
+public abstract interface class app/softwork/sqldelight/db2dialect/grammar/psi/Db2LiteralValue : com/alecstrong/sql/psi/core/psi/SqlLiteralValue {
+}
+
 public abstract interface class app/softwork/sqldelight/db2dialect/grammar/psi/Db2Multiplier : com/alecstrong/sql/psi/core/psi/SqlCompositeElement {
 }
 
@@ -279,6 +286,7 @@ public abstract interface class app/softwork/sqldelight/db2dialect/grammar/psi/D
 	public abstract fun getBindParameter ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2BindParameter;
 	public abstract fun getExtensionStmt ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2ExtensionStmt;
 	public abstract fun getGeneratedClause ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2GeneratedClause;
+	public abstract fun getLiteralValue ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2LiteralValue;
 	public abstract fun getSelectStmt ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2SelectStmt;
 	public abstract fun getTypeName ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2TypeName;
 }
@@ -352,6 +360,8 @@ public abstract interface class app/softwork/sqldelight/db2dialect/grammar/psi/D
 	public static final field CHARACTER_STRING_DATA_TYPE Lcom/intellij/psi/tree/IElementType;
 	public static final field CHAR_LENGTH_UNITS Lcom/intellij/psi/tree/IElementType;
 	public static final field COMMA Lcom/intellij/psi/tree/IElementType;
+	public static final field CURRENT_DATE Lcom/intellij/psi/tree/IElementType;
+	public static final field CURRENT_TIMESTAMP Lcom/intellij/psi/tree/IElementType;
 	public static final field DATE_DATA_TYPE Lcom/intellij/psi/tree/IElementType;
 	public static final field DEFAULT Lcom/intellij/psi/tree/IElementType;
 	public static final field DIGIT Lcom/intellij/psi/tree/IElementType;
@@ -373,10 +383,12 @@ public abstract interface class app/softwork/sqldelight/db2dialect/grammar/psi/D
 	public static final field INTERVAL_QUALIFIER Lcom/intellij/psi/tree/IElementType;
 	public static final field INTO Lcom/intellij/psi/tree/IElementType;
 	public static final field INT_DATA_TYPE Lcom/intellij/psi/tree/IElementType;
+	public static final field LITERAL_VALUE Lcom/intellij/psi/tree/IElementType;
 	public static final field LP Lcom/intellij/psi/tree/IElementType;
 	public static final field MULTIPLIER Lcom/intellij/psi/tree/IElementType;
 	public static final field NO Lcom/intellij/psi/tree/IElementType;
 	public static final field NON_SECOND_PRIMARY_DATETIME_FIELD Lcom/intellij/psi/tree/IElementType;
+	public static final field NULL Lcom/intellij/psi/tree/IElementType;
 	public static final field ON Lcom/intellij/psi/tree/IElementType;
 	public static final field ORDER Lcom/intellij/psi/tree/IElementType;
 	public static final field OVERRIDES Lcom/intellij/psi/tree/IElementType;
@@ -432,6 +444,7 @@ public class app/softwork/sqldelight/db2dialect/grammar/psi/Db2Visitor : com/int
 	public fun visitIntDataType (Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2IntDataType;)V
 	public fun visitIntervalDataType (Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2IntervalDataType;)V
 	public fun visitIntervalQualifier (Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2IntervalQualifier;)V
+	public fun visitLiteralValue (Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2LiteralValue;)V
 	public fun visitMultiplier (Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2Multiplier;)V
 	public fun visitNamedElement (Lcom/alecstrong/sql/psi/core/psi/NamedElement;)V
 	public fun visitNonSecondPrimaryDatetimeField (Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2NonSecondPrimaryDatetimeField;)V
@@ -449,6 +462,7 @@ public class app/softwork/sqldelight/db2dialect/grammar/psi/Db2Visitor : com/int
 	public fun visitSqlCompositeElement (Lcom/alecstrong/sql/psi/core/psi/SqlCompositeElement;)V
 	public fun visitSqlExtensionStmt (Lcom/alecstrong/sql/psi/core/psi/SqlExtensionStmt;)V
 	public fun visitSqlGeneratedClause (Lcom/alecstrong/sql/psi/core/psi/SqlGeneratedClause;)V
+	public fun visitSqlLiteralValue (Lcom/alecstrong/sql/psi/core/psi/SqlLiteralValue;)V
 	public fun visitSqlSelectStmt (Lcom/alecstrong/sql/psi/core/psi/SqlSelectStmt;)V
 	public fun visitSqlTypeName (Lcom/alecstrong/sql/psi/core/psi/SqlTypeName;)V
 	public fun visitStartField (Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2StartField;)V
@@ -605,6 +619,12 @@ public class app/softwork/sqldelight/db2dialect/grammar/psi/impl/Db2IntervalQual
 	public fun getStartField ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2StartField;
 }
 
+public class app/softwork/sqldelight/db2dialect/grammar/psi/impl/Db2LiteralValueImpl : app/softwork/sqldelight/db2dialect/grammar/psi/Db2LiteralValue {
+	public fun <init> (Lcom/intellij/lang/ASTNode;)V
+	public fun accept (Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2Visitor;)V
+	public fun accept (Lcom/intellij/psi/PsiElementVisitor;)V
+}
+
 public class app/softwork/sqldelight/db2dialect/grammar/psi/impl/Db2MultiplierImpl : com/alecstrong/sql/psi/core/psi/SqlCompositeElementImpl, app/softwork/sqldelight/db2dialect/grammar/psi/Db2Multiplier {
 	public fun <init> (Lcom/intellij/lang/ASTNode;)V
 	public fun accept (Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2Visitor;)V
@@ -624,6 +644,7 @@ public class app/softwork/sqldelight/db2dialect/grammar/psi/impl/Db2OverridesImp
 	public fun getBindParameter ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2BindParameter;
 	public fun getExtensionStmt ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2ExtensionStmt;
 	public fun getGeneratedClause ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2GeneratedClause;
+	public fun getLiteralValue ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2LiteralValue;
 	public fun getSelectStmt ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2SelectStmt;
 	public fun getTypeName ()Lapp/softwork/sqldelight/db2dialect/grammar/psi/Db2TypeName;
 }
