@@ -360,6 +360,8 @@ public abstract interface class app/softwork/sqldelight/db2dialect/grammar/psi/D
 	public static final field CHARACTER_STRING_DATA_TYPE Lcom/intellij/psi/tree/IElementType;
 	public static final field CHAR_LENGTH_UNITS Lcom/intellij/psi/tree/IElementType;
 	public static final field COMMA Lcom/intellij/psi/tree/IElementType;
+	public static final field CURRENT_DATE Lcom/intellij/psi/tree/IElementType;
+	public static final field CURRENT_TIMESTAMP Lcom/intellij/psi/tree/IElementType;
 	public static final field DATE_DATA_TYPE Lcom/intellij/psi/tree/IElementType;
 	public static final field DEFAULT Lcom/intellij/psi/tree/IElementType;
 	public static final field DIGIT Lcom/intellij/psi/tree/IElementType;
