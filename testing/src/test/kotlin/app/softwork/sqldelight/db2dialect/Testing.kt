@@ -13,13 +13,19 @@ class Testing {
         val time = LocalDateTime.of(2023, 10, 10, 1, 1)
 
         assertEquals(emptyList(), db.fooQueries.getAll().executeAsList())
-        db.fooQueries.new(Foo(42, -1, time, "Foo"))
-        assertEquals(listOf(Foo(42, -1, time, "Foo")), db.fooQueries.getAll().executeAsList())
+        val create = Foo(42, -1, time, "Foo")
+        db.fooQueries.new(create)
+        assertEquals(listOf(create), db.fooQueries.getAll().executeAsList())
 
         db.fooQueries.create(Foo(100, -1, time, "Bar"))
-        assertEquals(
-            listOf(Foo(42, -1, time, "Foo"), Foo(100, -1, time, "Bar")),
-            db.fooQueries.getAll().executeAsList()
-        )
+        val getAll = db.fooQueries.getAll().executeAsList()
+        assertEquals(2, getAll.size)
+        assertEquals(create, getAll[0])
+        with(getAll[1]) {
+            assertEquals(100, id)
+            assertEquals(42, id2)
+            assertTrue(LocalDateTime.of(2023, 1, 1, 1, 1) > time)
+            assertEquals("Bar", name)
+        }
     }
 }
