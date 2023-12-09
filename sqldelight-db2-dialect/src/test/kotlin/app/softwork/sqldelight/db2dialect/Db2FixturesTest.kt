@@ -8,25 +8,25 @@ import java.io.File
 
 @RunWith(Parameterized::class)
 class Db2FixturesTest(name: String, fixtureRoot: File) : FixturesTest(name, fixtureRoot) {
-  override val replaceRules = arrayOf(
-    "TEXT" to "VARCHAR(8)",
-  )
+    override val replaceRules = arrayOf(
+        "TEXT" to "VARCHAR(8)",
+    )
 
-  override fun setupDialect() {
-    Db2Dialect().setup()
-  }
+    override fun setupDialect() {
+        Db2Dialect().setup()
+    }
 
-  companion object {
-    private val fixtures = arrayOf("src/test/fixtures_db2")
+    companion object {
+        private val fixtures = arrayOf("src/test/fixtures_db2")
 
-    @Suppress("unused")
-    // Used by Parameterized JUnit runner reflectively.
-    @Parameters(name = "{0}")
-    @JvmStatic
-    fun parameters() = fixtures.flatMap { fixtureFolder ->
-      File(fixtureFolder).listFiles()!!
-        .filter { it.isDirectory }
-        .map { arrayOf(it.name, it) }
-    } // + ansiFixtures
-  }
+        @Suppress("unused")
+        // Used by Parameterized JUnit runner reflectively.
+        @Parameters(name = "{0}")
+        @JvmStatic
+        fun parameters() = fixtures.flatMap { fixtureFolder ->
+            File(fixtureFolder).listFiles()!!
+                .filter { it.isDirectory }
+                .map { arrayOf(it.name, it) }
+        } + ansiFixtures
+    }
 }

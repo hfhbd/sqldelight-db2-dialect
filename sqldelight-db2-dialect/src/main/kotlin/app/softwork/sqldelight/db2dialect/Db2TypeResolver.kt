@@ -41,9 +41,6 @@ internal class Db2TypeResolver(private val parentResolver: TypeResolver) : TypeR
         }
     }
 
-    override fun functionType(functionExpr: SqlFunctionExpr): IntermediateType? =
-        parentResolver.functionType(functionExpr)
-
     override fun queryWithResults(sqlStmt: SqlStmt): QueryWithResults? {
         val ext = sqlStmt.extensionStmt
         if (ext != null) {
