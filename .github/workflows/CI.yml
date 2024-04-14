@@ -10,9 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     env:
       GRADLE_OPTS: -Dorg.gradle.caching=true
 
@@ -22,9 +19,8 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: 17
-      - uses: gradle/gradle-build-action@v2
+      - uses: gradle/actions/setup-gradle@v3
         with:
-          dependency-graph: generate-and-submit
           gradle-home-cache-cleanup: true
       - run: ./gradlew assemble
       - run: ./gradlew build
