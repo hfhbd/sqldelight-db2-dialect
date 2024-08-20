@@ -6,7 +6,7 @@ import org.testcontainers.containers.*
 
 object DB2 {
     val driver = run {
-        val container = Db2Container("ibmcom/db2:11.5.7.0").acceptLicense()
+        val container = Db2Container("icr.io/db2_community/db2:11.5.9.0").acceptLicense()
         container.start()
         DB2SimpleDataSource().apply {
             databaseName = "test"
