@@ -9,6 +9,7 @@ dependencies {
     implementation(libs.plugins.binary.toDep())
     implementation(libs.plugins.sqldelight.toDep())
     implementation(libs.plugins.licensee.toDep())
+    implementation(libs.plugins.mavencentral.toDep())
 }
 
 fun Provider<PluginDependency>.toDep() = map {

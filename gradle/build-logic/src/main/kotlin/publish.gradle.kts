@@ -4,6 +4,7 @@ plugins {
     id("java")
     id("maven-publish")
     id("signing")
+    id("io.github.hfhbd.mavencentral")
 }
 
 java {
