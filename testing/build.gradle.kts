@@ -8,10 +8,15 @@ kotlin.jvmToolchain(8)
 dependencies {
     implementation(libs.sqldelight.jdbcDriver)
     implementation(libs.db2.driver)
+}
 
-    testImplementation(kotlin("test"))
-    testImplementation(libs.testcontainers)
-    testRuntimeOnly(libs.logback)
+testing.suites.named("test", JvmTestSuite::class) {
+    useKotlinTest()
+
+    dependencies {
+        implementation(libs.testcontainers)
+        runtimeOnly(libs.logback)
+    }
 }
 
 sqldelight {
