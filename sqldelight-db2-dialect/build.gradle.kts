@@ -22,6 +22,8 @@ dependencies {
 
 testing.suites.named("test", JvmTestSuite::class) {
     useKotlinTest()
+    useJUnit()
+
     dependencies {
         implementation(libs.sqldelight.compilerEnv)
         implementation(testFixtures(libs.sql.psi))
