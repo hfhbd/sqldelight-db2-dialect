@@ -1,7 +1,10 @@
+@file:OptIn(ExperimentalAbiValidation::class)
+
+import org.jetbrains.kotlin.gradle.dsl.abi.ExperimentalAbiValidation
+
 plugins {
     kotlin("jvm")
     id("com.alecstrong.grammar.kit.composer")
-    id("org.jetbrains.kotlinx.binary-compatibility-validator")
     id("app.cash.licensee")
     id("publish")
     id("exclude")
@@ -15,11 +18,15 @@ grammarKit {
 dependencies {
     api(libs.sqldelight.dialect)
     compileOnly(libs.sqldelight.compilerEnv)
+}
 
-    testImplementation(kotlin("test"))
-    testImplementation(libs.sqldelight.compilerEnv)
-    testImplementation(testFixtures(libs.sql.psi))
-    testImplementation(libs.sql.psi.env)
+testing.suites.named("test", JvmTestSuite::class) {
+    useKotlinTest()
+    dependencies {
+        implementation(libs.sqldelight.compilerEnv)
+        implementation(testFixtures(libs.sql.psi))
+        implementation(libs.sql.psi.env)
+    }
 }
 
 kotlin {
@@ -30,6 +37,9 @@ kotlin {
     compilerOptions {
         allWarningsAsErrors.set(true)
         progressiveMode.set(true)
+    }
+    abiValidation {
+        enabled.set(true)
     }
 }
 
