@@ -45,6 +45,10 @@ kotlin {
     }
 }
 
+tasks.check {
+    dependsOn(tasks.checkLegacyAbi)
+}
+
 licensee {
     allow("Apache-2.0")
 }
