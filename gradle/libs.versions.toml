@@ -19,4 +19,4 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version = "2.3.0" }
 sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
 licensee = { id = "app.cash.licensee", version = "1.13.0" }
 grammarKit = { id = "com.alecstrong.grammar.kit.composer", version = "0.1.12" }
-mavencentral = { id = "io.github.hfhbd.mavencentral", version = "0.0.17" }
+mavencentral = { id = "io.github.hfhbd.mavencentral", version = "0.0.23" }
