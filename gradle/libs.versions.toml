@@ -1,5 +1,5 @@
 [versions]
-sqldelight = "2.1.0"
+sqldelight = "2.2.1"
 idea = "231.9414.13" # AS Hedgehog | 2023.1.1
 sqlpsi = "0.4.9"
 
