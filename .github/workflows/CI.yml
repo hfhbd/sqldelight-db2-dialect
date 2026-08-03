@@ -12,6 +12,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-      - uses: gradle/actions/setup-gradle@v6
+      - uses: gradle/actions/setup-gradle@v6.2.0
 
       - run: ./gradlew build
