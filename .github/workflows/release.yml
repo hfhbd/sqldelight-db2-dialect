@@ -21,7 +21,7 @@ jobs:
         uses: hfhbd/actions/setup-version@main
         id: version
       - uses: actions/checkout@v7
-      - uses: gradle/actions/setup-gradle@v6.2.0
+      - uses: gradle/actions/setup-gradle@v6.3.0
 
       - name: Release maven artifacts
         run: ./gradlew publishToMavenCentral -Pversion=${{ steps.version.outputs.version }}
